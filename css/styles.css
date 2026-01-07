@@ -1122,7 +1122,7 @@ img {
 /* AI Section */
 .ai-section {
     position: relative;
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-xxl) 0;
     overflow: hidden;
 }
 
@@ -1137,64 +1137,68 @@ img {
 }
 
 .ai-header {
-    text-align: center;
-    margin-bottom: var(--spacing-2xl);
-}
-
-.ai-title-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
-    flex-wrap: wrap;
-}
-
-.ai-logo-text {
-    font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--color-dark);
-    letter-spacing: 0.05em;
-}
-
-.ai-ampersand {
-    font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 400;
-    color: var(--color-dark);
-}
-
-.ai-highlight {
-    font-family: var(--font-display);
-    font-size: 3rem;
-    font-weight: 700;
-    color: #8B5CF6;
+    margin-bottom: var(--spacing-xl);
 }
 
 .ai-main-title {
     font-family: var(--font-display);
-    font-size: 2.25rem;
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 400;
     color: var(--color-dark);
-    margin-bottom: var(--spacing-lg);
-    line-height: 1.3;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
 }
 
-.ai-intro {
-    font-size: 1.1rem;
+.ai-title-highlight {
+    color: var(--color-primary);
+}
+
+.ai-subtitle {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+/* AI Philosophy Section */
+.ai-philosophy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.ai-philosophy-block {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+}
+
+.ai-philosophy-title {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 700;
     color: var(--color-dark);
-    max-width: 900px;
-    margin: 0 auto;
+    margin-bottom: var(--spacing-sm);
+}
+
+.ai-philosophy-text {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-dark);
     line-height: 1.7;
-    opacity: 0.9;
+    margin-bottom: var(--spacing-sm);
+}
+
+.ai-philosophy-text:last-child {
+    margin-bottom: 0;
 }
 
 .ai-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-xl);
 }
 
 .ai-card {
@@ -1255,6 +1259,10 @@ img {
     .ai-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .ai-philosophy {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -1262,20 +1270,11 @@ img {
         grid-template-columns: 1fr;
     }
 
-    .ai-title-group {
-        flex-direction: column;
-        gap: var(--spacing-sm);
-    }
-
-    .ai-logo-text {
-        font-size: 1.5rem;
-    }
-
-    .ai-highlight {
-        font-size: 2.5rem;
+    .ai-philosophy {
+        grid-template-columns: 1fr;
     }
 
     .ai-main-title {
-        font-size: 1.75rem;
+        font-size: 2rem;
     }
 }

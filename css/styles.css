@@ -1162,10 +1162,8 @@ img {
 
 /* AI Philosophy Section */
 .ai-philosophy {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
     margin-bottom: var(--spacing-xl);
+    max-width: 800px;
 }
 
 .ai-philosophy-block {
@@ -1174,18 +1172,18 @@ img {
 
 .ai-philosophy-title {
     font-family: var(--font-body);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--color-white);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
 }
 
 .ai-philosophy-text {
     font-family: var(--font-body);
-    font-size: 14px;
+    font-size: 16px;
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.7;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
 }
 
 .ai-philosophy-text:last-child {
@@ -1266,10 +1264,6 @@ img {
 /* AI Section Responsive */
 @media (max-width: 768px) {
     .ai-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .ai-philosophy {
         grid-template-columns: 1fr;
     }
 

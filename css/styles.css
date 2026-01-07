@@ -1190,11 +1190,12 @@ img {
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 24px;
     padding: var(--spacing-lg);
-    transition: border-color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .ai-card:hover {
-    border-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--color-white);
+    border-color: var(--color-white);
 }
 
 .ai-card-title {
@@ -1203,6 +1204,11 @@ img {
     font-weight: 700;
     color: var(--color-white);
     margin-bottom: var(--spacing-xs);
+    transition: color 0.3s ease;
+}
+
+.ai-card:hover .ai-card-title {
+    color: var(--color-secondary);
 }
 
 .ai-card-text {
@@ -1210,6 +1216,11 @@ img {
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
     margin-bottom: var(--spacing-sm);
+    transition: color 0.3s ease;
+}
+
+.ai-card:hover .ai-card-text {
+    color: var(--color-secondary);
 }
 
 .ai-card-best {
@@ -1218,6 +1229,11 @@ img {
     color: rgba(255, 255, 255, 0.7);
     font-weight: 500;
     font-style: italic;
+    transition: color 0.3s ease;
+}
+
+.ai-card:hover .ai-card-best {
+    color: var(--color-secondary);
 }
 
 .ai-cta {

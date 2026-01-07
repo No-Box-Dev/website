@@ -740,12 +740,11 @@ img {
     padding: var(--spacing-sm) var(--spacing-md);
     margin: 0 calc(-1 * var(--spacing-md));
     border-radius: 25px;
-    border: 2px solid transparent;
-    transition: border-color var(--transition-base);
+    transition: background-color var(--transition-base);
 }
 
 .step-item:hover {
-    border-color: var(--color-primary);
+    background-color: var(--color-primary);
 }
 
 .step-number {
@@ -754,6 +753,11 @@ img {
     font-weight: 400;
     color: var(--color-primary);
     min-width: 60px;
+    transition: color var(--transition-base);
+}
+
+.step-item:hover .step-number {
+    color: var(--color-white);
 }
 
 .step-content {
@@ -766,13 +770,23 @@ img {
     font-weight: 700;
     margin-bottom: var(--spacing-xs);
     color: var(--color-primary);
+    transition: color var(--transition-base);
+}
+
+.step-item:hover .step-title {
+    color: var(--color-white);
 }
 
 .step-description {
     font-family: var(--font-body);
     font-size: 16px;
-    color: var(--color-text-light);
+    color: var(--color-primary);
     line-height: 1.7;
+    transition: color var(--transition-base);
+}
+
+.step-item:hover .step-description {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Contact Section */

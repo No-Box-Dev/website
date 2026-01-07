@@ -1194,34 +1194,34 @@ img {
 
 .ai-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-xl);
 }
 
 .ai-card {
-    background: var(--color-white);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 24px;
-    padding: var(--spacing-md) var(--spacing-lg);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: var(--spacing-lg);
+    transition: border-color 0.3s ease;
 }
 
 .ai-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 255, 255, 0.8);
 }
 
 .ai-card-title {
     font-family: var(--font-body);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
-    color: var(--color-dark);
+    color: var(--color-white);
     margin-bottom: var(--spacing-xs);
 }
 
 .ai-card-text {
     font-size: 14px;
-    color: var(--color-text-light);
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
     margin-bottom: var(--spacing-sm);
 }
@@ -1229,7 +1229,7 @@ img {
 .ai-card-best {
     display: block;
     font-size: 13px;
-    color: var(--color-secondary);
+    color: rgba(255, 255, 255, 0.7);
     font-weight: 500;
     font-style: italic;
 }
@@ -1248,16 +1248,6 @@ img {
 }
 
 /* AI Section Responsive */
-@media (max-width: 1024px) {
-    .ai-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .ai-philosophy {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 @media (max-width: 768px) {
     .ai-grid {
         grid-template-columns: 1fr;

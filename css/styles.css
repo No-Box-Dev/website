@@ -49,7 +49,7 @@
 :root {
     --color-primary: #FE795D;
     --color-primary-dark: #e56a50;
-    --color-secondary: #9B78F4;
+    --color-secondary: #B49AF7;
     --color-dark: #201E1D;
     --color-charcoal: #333333;
     --color-light-grey: #F5F5F5;
@@ -650,7 +650,7 @@ img {
 .coming-soon-btn {
     display: block;
     padding: 0.75rem 1.5rem;
-    background-color: #9B78F4;
+    background-color: var(--color-secondary);
     color: var(--color-white);
     font-family: var(--font-body);
     font-size: 14px;
@@ -699,7 +699,7 @@ img {
 
 /* Collaboration CTA */
 .collaboration-cta {
-    background-color: #9B78F8;
+    background-color: var(--color-secondary);
     padding: 80px 0;
     text-align: center;
 }

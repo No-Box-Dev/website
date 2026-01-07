@@ -1132,7 +1132,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, #E8E0F0 0%, #D4C4E8 30%, #C9B8E0 50%, #B8A8D8 70%, #E0D8F0 100%);
+    background-color: var(--color-secondary);
     z-index: -1;
 }
 
@@ -1144,19 +1144,19 @@ img {
     font-family: var(--font-display);
     font-size: 40px;
     font-weight: 400;
-    color: var(--color-dark);
+    color: var(--color-white);
     margin-bottom: var(--spacing-sm);
     line-height: 1.2;
 }
 
 .ai-title-highlight {
-    color: var(--color-primary);
+    color: var(--color-white);
 }
 
 .ai-subtitle {
     font-family: var(--font-body);
     font-size: 16px;
-    color: var(--color-text-light);
+    color: rgba(255, 255, 255, 0.85);
     margin: 0;
 }
 
@@ -1164,14 +1164,14 @@ img {
 .ai-philosophy {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg);
     margin-bottom: var(--spacing-xl);
 }
 
 .ai-philosophy-block {
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
+    background: var(--color-white);
+    border-radius: 24px;
+    padding: var(--spacing-xl);
 }
 
 .ai-philosophy-title {
@@ -1185,7 +1185,7 @@ img {
 .ai-philosophy-text {
     font-family: var(--font-body);
     font-size: 14px;
-    color: var(--color-dark);
+    color: var(--color-text-light);
     line-height: 1.7;
     margin-bottom: var(--spacing-sm);
 }
@@ -1202,39 +1202,36 @@ img {
 }
 
 .ai-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    border-radius: var(--radius-lg);
+    background: var(--color-white);
+    border-radius: 24px;
     padding: var(--spacing-xl);
-    border: 1px solid rgba(255, 255, 255, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ai-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(139, 92, 246, 0.15);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
 }
 
 .ai-card-title {
-    font-family: var(--font-display);
-    font-size: 1.15rem;
+    font-family: var(--font-body);
+    font-size: 16px;
     font-weight: 700;
     color: var(--color-dark);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
 }
 
 .ai-card-text {
-    font-size: 0.95rem;
-    color: var(--color-dark);
+    font-size: 14px;
+    color: var(--color-text-light);
     line-height: 1.6;
-    opacity: 0.85;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
 }
 
 .ai-card-best {
     display: block;
-    font-size: 0.85rem;
-    color: #8B5CF6;
+    font-size: 13px;
+    color: var(--color-secondary);
     font-weight: 500;
     font-style: italic;
 }
@@ -1242,14 +1239,14 @@ img {
 .ai-cta {
     text-align: center;
     padding: var(--spacing-xl);
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: var(--radius-lg);
+    background: var(--color-white);
+    border-radius: 24px;
     max-width: 600px;
     margin: 0 auto;
 }
 
 .ai-cta-text {
-    font-size: 1.1rem;
+    font-size: 16px;
     color: var(--color-dark);
     margin-bottom: var(--spacing-md);
 }

@@ -1169,23 +1169,21 @@ img {
 }
 
 .ai-philosophy-block {
-    background: var(--color-white);
-    border-radius: 24px;
-    padding: var(--spacing-xl);
+    padding: 0;
 }
 
 .ai-philosophy-title {
     font-family: var(--font-body);
     font-size: 18px;
     font-weight: 700;
-    color: var(--color-dark);
+    color: var(--color-white);
     margin-bottom: var(--spacing-sm);
 }
 
 .ai-philosophy-text {
     font-family: var(--font-body);
     font-size: 14px;
-    color: var(--color-text-light);
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.7;
     margin-bottom: var(--spacing-sm);
 }
@@ -1238,16 +1236,14 @@ img {
 
 .ai-cta {
     text-align: center;
-    padding: var(--spacing-xl);
-    background: var(--color-white);
-    border-radius: 24px;
+    padding: var(--spacing-xl) 0;
     max-width: 600px;
     margin: 0 auto;
 }
 
 .ai-cta-text {
     font-size: 16px;
-    color: var(--color-dark);
+    color: var(--color-white);
     margin-bottom: var(--spacing-md);
 }
 

@@ -1195,14 +1195,14 @@ img {
 .ai-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
     margin-bottom: var(--spacing-xl);
 }
 
 .ai-card {
     background: var(--color-white);
     border-radius: 24px;
-    padding: var(--spacing-xl);
+    padding: var(--spacing-md) var(--spacing-lg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

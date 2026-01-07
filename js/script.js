@@ -79,40 +79,6 @@ caseStudyCards.forEach(card => {
     }
 });
 
-// How We Work - Scroll-based step highlighting
-const stepItems = document.querySelectorAll('.step-item');
-const howWeWorkSection = document.getElementById('how-we-work');
-
-function updateActiveStep() {
-    if (!howWeWorkSection || stepItems.length === 0) return;
-
-    const sectionRect = howWeWorkSection.getBoundingClientRect();
-    const sectionTop = sectionRect.top;
-    const sectionHeight = sectionRect.height;
-    const windowHeight = window.innerHeight;
-
-    // Only activate when section is in view
-    if (sectionTop > windowHeight || sectionTop + sectionHeight < 0) {
-        return;
-    }
-
-    // Calculate which step should be active based on scroll position within the section
-    const scrollProgress = Math.max(0, Math.min(1, (windowHeight / 2 - sectionTop) / sectionHeight));
-    const activeIndex = Math.min(Math.floor(scrollProgress * stepItems.length), stepItems.length - 1);
-
-    // Update active class
-    stepItems.forEach((step, index) => {
-        if (index === activeIndex) {
-            step.classList.add('active');
-        } else {
-            step.classList.remove('active');
-        }
-    });
-}
-
-// Run on scroll and load
-window.addEventListener('scroll', updateActiveStep);
-window.addEventListener('load', updateActiveStep);
 
 // Form submission feedback
 const contactForm = document.querySelector('.contact-form');

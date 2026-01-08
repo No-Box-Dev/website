@@ -100,6 +100,26 @@ stepHeaders.forEach(header => {
     });
 });
 
+// FAQ - Accordion functionality
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const isExpanded = faqItem.classList.contains('expanded');
+
+        // Close all other items
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('expanded');
+        });
+
+        // Toggle current item
+        if (!isExpanded) {
+            faqItem.classList.add('expanded');
+        }
+    });
+});
+
 // Form submission feedback
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {

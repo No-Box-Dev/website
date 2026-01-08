@@ -808,6 +808,115 @@ img {
     margin-bottom: 0;
 }
 
+/* FAQ Page */
+.faq-page {
+    background-color: #FFFFFF;
+    min-height: 100vh;
+    padding: 120px 0 80px;
+}
+
+.faq-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.faq-title {
+    font-family: var(--font-display);
+    font-size: 48px;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.faq-list {
+    max-width: 800px;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(254, 121, 93, 0.2);
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) 0;
+    cursor: pointer;
+    transition: background-color var(--transition-base);
+}
+
+.faq-question:hover {
+    background-color: rgba(254, 121, 93, 0.05);
+}
+
+.faq-question-text {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-primary);
+    flex: 1;
+}
+
+.faq-toggle {
+    font-size: 16px;
+    color: var(--color-primary);
+    font-weight: 400;
+    transition: transform var(--transition-base);
+}
+
+.faq-item.expanded .faq-toggle {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 0 0 0;
+}
+
+.faq-item.expanded .faq-answer {
+    max-height: 500px;
+    padding-bottom: var(--spacing-lg);
+}
+
+.faq-answer p {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-sm);
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-answer ul {
+    list-style: none;
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.faq-answer ul li {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--color-text-light);
+    line-height: 1.7;
+    position: relative;
+    padding-left: var(--spacing-sm);
+}
+
+.faq-answer ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+}
+
 /* Contact Section */
 .contact {
     position: relative;

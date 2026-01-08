@@ -32,6 +32,25 @@ if (mobileMenuBtn && mobileNav) {
     });
 }
 
+// Mobile dropdown toggle
+const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
+const mobileNavDropdown = document.querySelector('.mobile-nav-dropdown');
+
+if (mobileDropdownToggle && mobileNavDropdown) {
+    mobileDropdownToggle.addEventListener('click', () => {
+        mobileNavDropdown.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking a dropdown link
+    mobileNavDropdown.querySelectorAll('.mobile-dropdown-link').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            mobileNavDropdown.classList.remove('active');
+        });
+    });
+}
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

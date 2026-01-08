@@ -774,14 +774,14 @@ img {
 }
 
 .step-toggle {
-    font-size: 24px;
+    font-size: 16px;
     color: var(--color-primary);
-    font-weight: 300;
+    font-weight: 400;
     transition: transform var(--transition-base);
 }
 
 .step-item.expanded .step-toggle {
-    transform: rotate(45deg);
+    transform: rotate(180deg);
 }
 
 .step-content {

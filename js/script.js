@@ -80,6 +80,26 @@ caseStudyCards.forEach(card => {
 });
 
 
+// How We Work - Accordion functionality
+const stepHeaders = document.querySelectorAll('.step-header');
+
+stepHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+        const stepItem = header.parentElement;
+        const isExpanded = stepItem.classList.contains('expanded');
+
+        // Close all other items
+        document.querySelectorAll('.step-item').forEach(item => {
+            item.classList.remove('expanded');
+        });
+
+        // Toggle current item
+        if (!isExpanded) {
+            stepItem.classList.add('expanded');
+        }
+    });
+});
+
 // Form submission feedback
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {

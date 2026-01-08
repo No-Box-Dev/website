@@ -1333,7 +1333,7 @@ img {
     font-size: 18px;
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.7;
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
 }
 
 .psychology-philosophy-text:last-child {

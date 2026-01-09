@@ -278,16 +278,21 @@ img {
     font-weight: 400;
     color: var(--color-white);
     text-decoration: none;
-    transition: color var(--transition-fast);
+    transition: color var(--transition-fast), border-color var(--transition-fast);
     background: transparent;
+    padding: 8px 14px;
+    border: 1.5px solid transparent;
+    border-radius: 6px;
 }
 
 .header.scrolled .nav-link {
     color: var(--color-white);
 }
 
-.nav-link:hover {
-    color: rgba(255, 255, 255, 0.8);
+.nav-link:hover,
+.nav-link:active {
+    color: var(--color-white);
+    border-color: var(--color-white);
 }
 
 /* Navigation Dropdown */

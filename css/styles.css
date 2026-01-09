@@ -1230,10 +1230,21 @@ img {
     font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.8);
     line-height: 1;
+    display: flex;
+    align-items: center;
 }
 
 .footer-legal a:hover {
     color: var(--color-white);
+}
+
+.footer-legal a + a::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-right: var(--spacing-md);
 }
 
 .footer-decoration {

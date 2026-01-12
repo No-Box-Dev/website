@@ -142,6 +142,95 @@ faqQuestions.forEach(question => {
 // Form validation and submission
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
+    // Blocked words list (profanity, insults, inappropriate content)
+    const blockedWords = [
+        'fuck', 'fck', 'f*ck', 'f**k', 'fuk', 'fuq', 'fuc', 'phuck', 'phuk',
+        'shit', 'sh*t', 'sh!t', 'sht', 'shyt',
+        'ass', 'a$$', 'a**', 'arse',
+        'bitch', 'b*tch', 'b!tch', 'biatch',
+        'damn', 'dammit', 'damm',
+        'crap',
+        'dick', 'd*ck', 'dik',
+        'cock', 'c*ck', 'cok',
+        'pussy', 'puss', 'p*ssy',
+        'cunt', 'c*nt', 'cnt',
+        'whore', 'wh*re', 'hoe', 'hoer',
+        'slut', 'sl*t',
+        'bastard', 'bstrd',
+        'piss', 'p*ss',
+        'stupid', 'stpid',
+        'dumb', 'dumbass',
+        'idiot', 'idioot',
+        'moron',
+        'retard', 'retarded',
+        'ugly',
+        'lame',
+        'suck', 'sucker', 'sux',
+        'loser',
+        'hate', 'hater',
+        'kill', 'killer',
+        'die',
+        'sex', 'sexy', 's3x',
+        'porn', 'porno', 'p0rn',
+        'nude', 'nudes', 'naked',
+        'boob', 'boobs', 'tits', 'tit',
+        'penis', 'vagina',
+        'horny', 'h0rny',
+        'masturbat',
+        'orgasm',
+        'erotic',
+        'xxx',
+        'anal',
+        'gay', 'fag', 'faggot', 'homo',
+        'nigger', 'nigga', 'n*gger', 'n*gga',
+        'racist',
+        'nazi',
+        'rape', 'rapist',
+        'molest',
+        'pedo', 'pedophile',
+        'terrorist',
+        'bomb',
+        'scam', 'scammer',
+        'spam', 'spammer'
+    ];
+
+    // Normalize text for checking (handle common evasions)
+    function normalizeText(str) {
+        return str.toLowerCase()
+            .replace(/0/g, 'o')
+            .replace(/1/g, 'i')
+            .replace(/3/g, 'e')
+            .replace(/4/g, 'a')
+            .replace(/5/g, 's')
+            .replace(/7/g, 't')
+            .replace(/8/g, 'b')
+            .replace(/\$/g, 's')
+            .replace(/@/g, 'a')
+            .replace(/\*/g, '')
+            .replace(/!/g, 'i')
+            .replace(/\s+/g, ' ');
+    }
+
+    // Check for blocked words
+    function containsBlockedWords(str) {
+        const normalized = normalizeText(str);
+        const words = normalized.split(/\s+/);
+
+        for (const blocked of blockedWords) {
+            // Check if blocked word appears in the normalized string
+            if (normalized.includes(blocked)) {
+                return true;
+            }
+            // Also check individual words
+            for (const word of words) {
+                if (word.includes(blocked) || blocked.includes(word) && word.length > 2) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     // Gibberish detection functions
     function hasRepeatedChars(str, threshold = 4) {
         return /(.)\1{3,}/i.test(str);
@@ -198,7 +287,24 @@ if (contactForm) {
         const submitBtn = this.querySelector('button[type="submit"]');
 
         const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
         const message = messageInput.value.trim();
+
+        // Check for blocked words in name
+        if (containsBlockedWords(name)) {
+            e.preventDefault();
+            alert('Please use appropriate language in your name.');
+            nameInput.focus();
+            return false;
+        }
+
+        // Check for blocked words in message
+        if (containsBlockedWords(message)) {
+            e.preventDefault();
+            alert('Please use appropriate language in your message.');
+            messageInput.focus();
+            return false;
+        }
 
         // Validate name
         if (!validateName(name)) {

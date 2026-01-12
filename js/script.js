@@ -139,11 +139,84 @@ faqQuestions.forEach(question => {
     });
 });
 
-// Form submission feedback
+// Form validation and submission
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', function() {
+    // Gibberish detection functions
+    function hasRepeatedChars(str, threshold = 4) {
+        return /(.)\1{3,}/i.test(str);
+    }
+
+    function hasKeyboardMashing(str) {
+        const patterns = ['asdf', 'qwer', 'zxcv', 'hjkl', 'uiop', 'fghj', 'bnm,', '1234', 'abcd'];
+        const lower = str.toLowerCase();
+        return patterns.some(p => lower.includes(p));
+    }
+
+    function hasTooManyConsonants(str) {
+        return /[bcdfghjklmnpqrstvwxyz]{5,}/i.test(str);
+    }
+
+    function hasRandomCharPattern(str) {
+        // Check for random special char patterns
+        const specialCount = (str.match(/[^a-zA-Z0-9\s.,!?'-]/g) || []).length;
+        return specialCount > str.length * 0.3;
+    }
+
+    function countWords(str) {
+        return str.trim().split(/\s+/).filter(w => w.length > 1).length;
+    }
+
+    function isGibberish(str) {
+        if (!str || str.length < 3) return true;
+        if (hasRepeatedChars(str)) return true;
+        if (hasKeyboardMashing(str)) return true;
+        if (hasTooManyConsonants(str)) return true;
+        if (hasRandomCharPattern(str)) return true;
+        return false;
+    }
+
+    function validateName(name) {
+        if (!name || name.length < 2) return false;
+        if (isGibberish(name)) return false;
+        // Name should mostly be letters and spaces
+        const letterCount = (name.match(/[a-zA-Z]/g) || []).length;
+        return letterCount >= name.replace(/\s/g, '').length * 0.7;
+    }
+
+    function validateMessage(message) {
+        if (!message || message.length < 20) return false;
+        if (countWords(message) < 3) return false;
+        if (isGibberish(message)) return false;
+        return true;
+    }
+
+    contactForm.addEventListener('submit', function(e) {
+        const nameInput = this.querySelector('#name');
+        const emailInput = this.querySelector('#email');
+        const messageInput = this.querySelector('#message');
         const submitBtn = this.querySelector('button[type="submit"]');
+
+        const name = nameInput.value.trim();
+        const message = messageInput.value.trim();
+
+        // Validate name
+        if (!validateName(name)) {
+            e.preventDefault();
+            alert('Please enter a valid name.');
+            nameInput.focus();
+            return false;
+        }
+
+        // Validate message
+        if (!validateMessage(message)) {
+            e.preventDefault();
+            alert('Please enter a meaningful message (at least 20 characters and 3 words).');
+            messageInput.focus();
+            return false;
+        }
+
+        // All good - show sending state
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
     });

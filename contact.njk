@@ -1,0 +1,69 @@
+---
+layout: base.njk
+title: "Contact — No Box Dev"
+description: "Get in touch with No Box Dev. Tell us about your project and we'll get back to you."
+canonical: "https://noboxdev.com/contact"
+permalink: "/contact/index.html"
+---
+
+<!-- Subpage Header with Contact Form -->
+<section class="subpage-header subpage-header--contact">
+  <div class="subpage-wave subpage-wave--1"></div>
+  <div class="subpage-wave subpage-wave--2"></div>
+  <div class="container">
+    <span class="section-label reveal">Contact</span>
+    <h1 class="reveal">Let's get started.</h1>
+    <p class="reveal">Tell us about your project and we'll get back to you within 24 hours.</p>
+
+    <div class="contact-grid reveal">
+      <div>
+        <form id="contact-form" action="https://formsubmit.co/meme@noboxdev.com" method="POST">
+          <input type="hidden" name="_subject" value="New contact from NoBoxDev website">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://noboxdev.com/contact">
+          <div class="form-honeypot" aria-hidden="true">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required inputmode="email">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell us about your project</label>
+            <textarea id="message" name="message" rows="5" placeholder="Describe your project, goals, and timeline..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send message</button>
+        </form>
+
+        <div class="form-success">
+          <h3>Message sent!</h3>
+          <p>We'll get back to you within 24 hours.</p>
+        </div>
+      </div>
+
+      <div class="contact-info">
+        <h3>Or reach us directly.</h3>
+        <div class="contact-detail">
+          <div class="label">Email</div>
+          <a href="mailto:hello@noboxdev.com">hello@noboxdev.com</a>
+        </div>
+        <div class="contact-detail">
+          <div class="label">Location</div>
+          <p>Available Worldwide</p>
+        </div>
+        <div class="contact-detail">
+          <div class="label">Response Time</div>
+          <p>Usually within 24 hours</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

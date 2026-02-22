@@ -1,0 +1,16 @@
+{
+  "name": "noboxdev-website",
+  "version": "1.0.0",
+  "description": "No Box Dev marketing website",
+  "main": "main.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "author": "No Box Dev",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@11ty/eleventy": "3.1.2"
+  }
+}

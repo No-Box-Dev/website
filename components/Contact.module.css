@@ -1,0 +1,118 @@
+.contact {
+  position: relative;
+  padding: var(--space-2xl) var(--space-md);
+  background: var(--light);
+  text-align: center;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--ease-out-expo),
+    transform 0.8s var(--ease-out-expo);
+}
+
+.contact.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.accent {
+  background: linear-gradient(135deg, var(--coral) 0%, var(--purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 440px;
+  margin: 0 auto var(--space-lg);
+}
+
+.note {
+  margin-top: var(--space-sm);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+.form {
+  display: flex;
+  gap: 0;
+  max-width: 480px;
+  margin: 0 auto;
+  border: 2px solid var(--dark);
+  border-radius: 100px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.form:focus-within {
+  border-color: var(--coral);
+}
+
+.input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.input::placeholder {
+  color: var(--text-secondary);
+}
+
+.button {
+  padding: 1rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: white;
+  background: var(--dark);
+  border-radius: 100px;
+  margin: 4px;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: var(--coral);
+}
+
+@media (max-width: 640px) {
+  .contact {
+    padding: var(--space-xl) var(--space-sm);
+  }
+
+  .form {
+    flex-direction: column;
+    border-radius: 16px;
+  }
+
+  .input {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .button {
+    margin: 0 4px 4px;
+    border-radius: 12px;
+    padding: 0.9rem;
+  }
+}

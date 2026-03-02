@@ -1,0 +1,17 @@
+/* =========================================
+   Baseline V2 Proposal — Page Wrapper
+   ========================================= */
+
+/* Baseline color tokens */
+:root {
+  --bl-cream: #F9F9ED;
+  --bl-porcelain: #F5F2EB;
+  --bl-sandstone: #E6E3DC;
+  --bl-serene-ash: #8A959A;
+  --bl-midnight: #3A4E59;
+  --bl-deep-inhale: #25333A;
+}
+
+.proposal {
+  overflow-x: hidden;
+}

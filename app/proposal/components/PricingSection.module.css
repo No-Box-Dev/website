@@ -1,0 +1,180 @@
+.pricing {
+  padding: 80px 0;
+  background: var(--light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 3vw, 3rem);
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+}
+
+.table {
+  max-width: 900px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 40px 1fr 1.2fr 100px;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.header span {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 40px 1fr 1.2fr 100px;
+  gap: 16px;
+  padding: 16px 8px;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.rowAlt {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.col1 {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.col2 {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.colName {
+  font-weight: 700;
+  color: var(--text-primary) !important;
+}
+
+.col3 {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.col4 {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+.colCost {
+  font-weight: 700;
+  color: var(--text-primary) !important;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  margin-top: 16px;
+  border-top: 2px solid var(--coral);
+}
+
+.totalLabel {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.totalAmount {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--coral);
+}
+
+.note {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+.terms {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+  max-width: 600px;
+}
+
+.term {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.termLabel {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.termValue {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .pricing {
+    padding: 48px 0;
+  }
+
+  .header,
+  .row {
+    grid-template-columns: 30px 1fr 80px;
+  }
+
+  .col3 {
+    display: none;
+  }
+
+  .terms {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,183 @@
+.vision {
+  padding: 80px 0;
+  background: var(--dark);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 3vw, 3rem);
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 12px;
+  display: block;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-inverse);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 600px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.pillar {
+  padding: 36px 32px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+.pillar:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.pillarIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 20px;
+}
+
+.pillarTitle {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.pillarDesc {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── Screen inventory ─────────────────── */
+.inventory {
+  padding: 80px 0;
+  background: var(--light);
+}
+
+.invGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-top: 40px;
+}
+
+.invCol h3 {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.invCol h3 span {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.tagV1 {
+  background: var(--bl-sandstone);
+  color: var(--bl-midnight);
+}
+
+.tagV2 {
+  background: var(--coral);
+  color: white;
+}
+
+.screenList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.screenItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.screenItem:last-child {
+  border-bottom: none;
+}
+
+.screenNum {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.2);
+  width: 24px;
+  flex-shrink: 0;
+}
+
+.screenNew {
+  color: var(--coral);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .vision,
+  .inventory {
+    padding: 48px 0;
+  }
+
+  .pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .invGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

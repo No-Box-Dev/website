@@ -1,0 +1,219 @@
+.feature {
+  padding: 80px 0;
+}
+
+.featureLight {
+  composes: feature;
+  background: var(--light);
+}
+
+.featureDark {
+  composes: feature;
+  background: var(--dark);
+}
+
+.featurePurple {
+  composes: feature;
+  background: linear-gradient(135deg, #C4B0FF 0%, #A88DF7 50%, #8B6FE0 100%);
+}
+
+.featureCoral {
+  composes: feature;
+  background: linear-gradient(135deg, #FE795D 0%, #F06A4A 50%, #E5603F 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 3vw, 3rem);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.gridReverse {
+  composes: grid;
+}
+
+.gridReverse > :first-child {
+  order: 2;
+}
+
+.gridReverse > :last-child {
+  order: 1;
+}
+
+.featureNum {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.featureNumLight {
+  composes: featureNum;
+  color: rgba(254, 121, 93, 0.15);
+}
+
+.featureNumDark {
+  composes: featureNum;
+  color: rgba(254, 121, 93, 0.25);
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.titleLight {
+  composes: title;
+  color: var(--text-primary);
+}
+
+.titleDark {
+  composes: title;
+  color: var(--text-inverse);
+}
+
+.price {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--coral);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.featureCoral .price,
+.featurePurple .price {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.featureCoral .bulletDot {
+  background: white;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.6), 0 0 14px rgba(255, 255, 255, 0.4), 0 0 24px rgba(255, 255, 255, 0.2);
+}
+
+.featurePurple .bulletDot {
+  background: var(--coral);
+  box-shadow: 0 0 6px rgba(254, 121, 93, 0.7), 0 0 14px rgba(254, 121, 93, 0.5), 0 0 24px rgba(254, 121, 93, 0.3);
+}
+
+.featureCoral .bulletLine,
+.featurePurple .bulletLine {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.featurePurple .featureNumDark {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.featureCoral .featureNumDark {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.desc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.descLight {
+  composes: desc;
+  color: var(--text-secondary);
+}
+
+.descDark {
+  composes: desc;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.items li {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  padding: 7px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.itemsLight li {
+  color: var(--text-primary);
+}
+
+.itemsDark li {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.bullet {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 28px;
+}
+
+.bulletLine {
+  width: 14px;
+  height: 1px;
+  background: var(--bl-serene-ash);
+  flex-shrink: 0;
+}
+
+.bulletDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--coral);
+  box-shadow: 0 0 6px rgba(254, 121, 93, 0.6), 0 0 14px rgba(254, 121, 93, 0.4), 0 0 24px rgba(254, 121, 93, 0.2);
+  flex-shrink: 0;
+}
+
+.itemsDark .bulletLine {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.mockupArea {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mockupSingle {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .feature {
+    padding: 48px 0;
+  }
+
+  .grid,
+  .gridReverse {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .gridReverse > :first-child {
+    order: 1;
+  }
+
+  .gridReverse > :last-child {
+    order: 2;
+  }
+
+  .mockupArea {
+    flex-direction: column;
+    align-items: center;
+  }
+}

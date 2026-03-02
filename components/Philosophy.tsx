@@ -28,9 +28,13 @@ export default function Philosophy() {
       <div className={styles.inner}>
         <div className={styles.statement}>
           <h2 className={styles.headline}>
-            Without psychology, AI optimizes systems<span className={styles.accent}>.</span>
+            Without psychology,
             <br />
-            With psychology, AI supports people<span className={styles.accent}>.</span>
+            AI optimizes systems<span className={styles.accent}>.</span>
+            <br />
+            With psychology,
+            <br />
+            AI supports people<span className={styles.accent}>.</span>
           </h2>
         </div>
         <div className={styles.columns}>

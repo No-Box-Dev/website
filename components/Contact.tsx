@@ -27,12 +27,10 @@ export default function Contact() {
     <section ref={sectionRef} id="contact" className={styles.contact} data-glow="light">
       <div className={styles.inner}>
         <h2 className={styles.headline}>
-          Ready to build something
-          <br />
-          <span className={styles.accent}>meaningful?</span>
+          Let&apos;s <span className={styles.accent}>Talk</span>
         </h2>
         <p className={styles.subtitle}>
-          We collaborate with founders and teams to build human-centered digital products. Tell us what you&apos;re working on.
+          Working on something exciting and need support? We build human-centered digital products. Drop us a line.
         </p>
         <form
           className={styles.form}

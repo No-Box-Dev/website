@@ -1,0 +1,131 @@
+.timeline {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #9B78F4 0%, #7B5CD4 60%, #6344B8 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 3vw, 3rem);
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 12px;
+  display: block;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.track {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.track::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  right: 28px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.phase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.node {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: italic;
+  color: white;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.phaseTitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.phaseTime {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 12px;
+}
+
+.phaseDesc {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.45);
+  max-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding: 48px 0;
+  }
+
+  .track {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .track::before {
+    top: 0;
+    bottom: 0;
+    left: 28px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .phase {
+    flex-direction: row;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .phaseDesc {
+    max-width: none;
+  }
+}

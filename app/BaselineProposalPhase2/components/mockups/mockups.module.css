@@ -1,0 +1,804 @@
+/* =========================================
+   Shared mockup styles — Baseline palette
+   ========================================= */
+
+/* ── Common ────────────────────────────── */
+.screen {
+  padding: 20px;
+  background: var(--bl-cream);
+  font-family: var(--font-body);
+}
+
+.screenDark {
+  composes: screen;
+  background: var(--bl-deep-inhale);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: none;
+  cursor: default;
+}
+
+.pillPrimary {
+  composes: pill;
+  background: var(--bl-midnight);
+  color: var(--bl-cream);
+}
+
+.pillSecondary {
+  composes: pill;
+  background: transparent;
+  border: 1.5px solid var(--bl-sandstone);
+  color: var(--bl-midnight);
+}
+
+.pillCoral {
+  composes: pill;
+  background: var(--bl-midnight);
+  color: var(--bl-cream);
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--bl-sandstone);
+  padding: 16px;
+}
+
+.cardDark {
+  background: var(--bl-midnight);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px;
+}
+
+/* ── Login mockup ──────────────────────── */
+.loginScreen {
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(58, 78, 89, 0.4) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(37, 51, 58, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 90%, rgba(138, 149, 154, 0.2) 0%, transparent 60%),
+    var(--bl-deep-inhale);
+}
+
+.loginContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px 32px;
+}
+
+.loginAppIcon {
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.loginTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--bl-cream);
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.loginSub {
+  font-size: 0.8rem;
+  color: var(--bl-serene-ash);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.loginCard {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.loginFooter {
+  font-size: 0.75rem;
+  color: var(--bl-serene-ash);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.loginFooter strong {
+  color: var(--bl-cream);
+}
+
+.inputField {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--bl-sandstone);
+  margin-bottom: 12px;
+}
+
+.loginBtns {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.divider span {
+  font-size: 0.75rem;
+  color: var(--bl-serene-ash);
+  white-space: nowrap;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.appleBtn {
+  composes: pill;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  width: 100%;
+  gap: 8px;
+}
+
+/* ── Paywall mockup ────────────────────── */
+.paywallScreen {
+  composes: screen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 24px;
+}
+
+.paywallTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.paywallSub {
+  font-size: 0.85rem;
+  color: var(--bl-serene-ash);
+  margin-bottom: 24px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.planCards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.planCard {
+  composes: card;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: default;
+  transition: border-color 0.2s ease;
+}
+
+.planCardActive {
+  composes: planCard;
+  border-color: var(--bl-midnight);
+  border-width: 2px;
+}
+
+.planName {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--bl-midnight);
+}
+
+.planPrice {
+  font-size: 0.85rem;
+  color: var(--bl-serene-ash);
+  margin-top: 2px;
+}
+
+.planBadge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 100px;
+  background: var(--bl-midnight);
+  color: var(--bl-cream);
+}
+
+.planSave {
+  font-size: 0.75rem;
+  color: var(--bl-midnight);
+  font-weight: 700;
+}
+
+.features {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.featureRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 0.85rem;
+  color: var(--bl-midnight);
+}
+
+.checkmark {
+  color: var(--bl-midnight);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── Course mockup ─────────────────────── */
+.courseScreen {
+  composes: screen;
+  padding: 24px;
+}
+
+.courseHeader {
+  margin-bottom: 20px;
+}
+
+.courseTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+  margin-bottom: 4px;
+}
+
+.courseSub {
+  font-size: 0.8rem;
+  color: var(--bl-serene-ash);
+}
+
+.progressBar {
+  width: 100%;
+  height: 6px;
+  background: var(--bl-sandstone);
+  border-radius: 3px;
+  margin: 16px 0 24px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--bl-midnight);
+  border-radius: 3px;
+}
+
+.sessionList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sessionCard {
+  composes: card;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sessionNum {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.sessionComplete {
+  background: var(--bl-midnight);
+  color: var(--bl-cream);
+}
+
+.sessionCurrent {
+  background: var(--bl-serene-ash);
+  color: white;
+}
+
+.sessionLocked {
+  background: var(--bl-sandstone);
+  color: var(--bl-serene-ash);
+}
+
+.sessionInfo {
+  flex: 1;
+}
+
+.sessionName {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--bl-midnight);
+}
+
+.sessionDuration {
+  font-size: 0.75rem;
+  color: var(--bl-serene-ash);
+  margin-top: 2px;
+}
+
+.sessionStatus {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Download states ───────────────────── */
+.downloadScreen {
+  composes: screen;
+  padding: 24px;
+}
+
+.downloadTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+  margin-bottom: 16px;
+}
+
+.meditationCards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.meditationCard {
+  composes: card;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.meditationThumb {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.meditationInfo {
+  flex: 1;
+}
+
+.meditationName {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--bl-midnight);
+}
+
+.meditationMeta {
+  font-size: 0.75rem;
+  color: var(--bl-serene-ash);
+  margin-top: 2px;
+}
+
+.dlIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.dlCloud {
+  background: var(--bl-sandstone);
+  color: var(--bl-midnight);
+}
+
+.dlProgress {
+  border: 2px solid var(--bl-midnight);
+  color: var(--bl-midnight);
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.dlCached {
+  background: var(--bl-midnight);
+  color: var(--bl-cream);
+}
+
+/* ── Notifications ─────────────────────── */
+.notifScreen {
+  composes: screen;
+  padding: 24px;
+}
+
+.notifTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+  margin-bottom: 4px;
+}
+
+.notifSub {
+  font-size: 0.8rem;
+  color: var(--bl-serene-ash);
+  margin-bottom: 24px;
+}
+
+.toggleList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--bl-sandstone);
+}
+
+.toggleRow:last-child {
+  border-bottom: none;
+}
+
+.toggleLabel {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+}
+
+.toggleDesc {
+  font-size: 0.75rem;
+  color: var(--bl-serene-ash);
+  margin-top: 2px;
+}
+
+.toggle {
+  width: 44px;
+  height: 26px;
+  border-radius: 13px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.toggleOn {
+  background: var(--bl-midnight);
+}
+
+.toggleOff {
+  background: var(--bl-sandstone);
+}
+
+.toggleKnob {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.toggleOn .toggleKnob {
+  right: 2px;
+}
+
+.toggleOff .toggleKnob {
+  left: 2px;
+}
+
+/* ── User stats ────────────────────────── */
+.statsScreen {
+  composes: screen;
+  padding: 24px;
+}
+
+.statsTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+  margin-bottom: 20px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.statCard {
+  composes: card;
+  text-align: center;
+  padding: 20px 12px;
+}
+
+.statValue {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+  display: block;
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  color: var(--bl-serene-ash);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.streakBar {
+  composes: card;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.streakDays {
+  display: flex;
+  gap: 6px;
+}
+
+.streakDot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+.streakActive {
+  background: var(--bl-midnight);
+  color: var(--bl-cream);
+}
+
+.streakInactive {
+  background: var(--bl-sandstone);
+  color: var(--bl-serene-ash);
+}
+
+/* ── Admin Dashboard ───────────────────── */
+.adminScreen {
+  padding: 24px;
+  background: var(--bl-porcelain);
+  font-family: var(--font-body);
+}
+
+.adminHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.adminTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+}
+
+.adminDate {
+  font-size: 0.75rem;
+  color: var(--bl-serene-ash);
+}
+
+.metricsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.metricCard {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 16px;
+}
+
+.metricLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--bl-serene-ash);
+  margin-bottom: 6px;
+}
+
+.metricValue {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+}
+
+.metricChange {
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.metricUp {
+  color: #28CA41;
+}
+
+.metricDown {
+  color: #FF5F57;
+}
+
+.chartPlaceholder {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  min-height: 160px;
+}
+
+.chartTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+  margin-bottom: 16px;
+}
+
+.chartBars {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 100px;
+}
+
+.chartBar {
+  flex: 1;
+  background: var(--bl-midnight);
+  border-radius: 4px 4px 0 0;
+  opacity: 0.7;
+  min-height: 8px;
+}
+
+/* ── CMS mockup ────────────────────────── */
+.cmsScreen {
+  padding: 0;
+  background: white;
+  font-family: var(--font-body);
+}
+
+.cmsSidebar {
+  display: flex;
+}
+
+.sideNav {
+  width: 180px;
+  background: var(--bl-deep-inhale);
+  padding: 20px 0;
+  min-height: 400px;
+}
+
+.sideNavItem {
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: default;
+}
+
+.sideNavActive {
+  composes: sideNavItem;
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--bl-serene-ash);
+}
+
+.cmsMain {
+  flex: 1;
+  padding: 24px;
+  background: var(--bl-porcelain);
+}
+
+.cmsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cmsTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+}
+
+.addBtn {
+  padding: 8px 16px;
+  background: var(--bl-midnight);
+  color: var(--bl-cream);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: none;
+  cursor: default;
+}
+
+.contentTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contentTable th {
+  text-align: left;
+  padding: 10px 12px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--bl-serene-ash);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.contentTable td {
+  padding: 12px;
+  font-size: 0.82rem;
+  color: var(--bl-midnight);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.statusBadge {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.statusPublished {
+  background: rgba(40, 202, 65, 0.1);
+  color: #28CA41;
+}
+
+.statusDraft {
+  background: rgba(255, 189, 46, 0.1);
+  color: #E6A800;
+}

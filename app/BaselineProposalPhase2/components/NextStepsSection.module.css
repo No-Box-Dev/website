@@ -1,0 +1,159 @@
+.nextSteps {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #FE795D 0%, #E5603F 60%, #D04A2A 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.polygon {
+  position: absolute;
+  top: -15%;
+  right: -8%;
+  width: 50%;
+  height: auto;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 3vw, 3rem);
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 400;
+  color: white;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  margin-bottom: 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 64px;
+}
+
+.processTitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.stepList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.step strong {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: white;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.step p {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.4;
+}
+
+.bullet {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 28px;
+  margin-top: 6px;
+}
+
+.bulletLine {
+  width: 14px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
+}
+
+.bulletDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+
+/* ── Contact ───────────────────────────── */
+.contactTitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contactLabel {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.contactItem span:last-child {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.validity {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 48px;
+}
+
+@media (max-width: 768px) {
+  .nextSteps {
+    padding: 48px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .polygon {
+    width: 80%;
+    right: -20%;
+  }
+}

@@ -1,0 +1,224 @@
+.pricing {
+  padding: 80px 0;
+  background: #F4F6F8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 3vw, 3rem);
+}
+
+.title {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: #132444;
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.95rem;
+  color: #132444;
+  opacity: 0.6;
+  margin-bottom: 48px;
+}
+
+.table {
+  max-width: 900px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 40px 1fr 1.2fr 100px;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.header span {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6B7280;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 40px 1fr 1.2fr 100px;
+  gap: 16px;
+  padding: 16px 8px;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.rowAlt {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.migrationRow {
+  display: grid;
+  grid-template-columns: 40px 1fr 1.2fr 100px;
+  gap: 16px;
+  padding: 16px 8px;
+  align-items: center;
+  border-radius: 6px;
+  background: rgba(31, 157, 155, 0.06);
+  border: 1px dashed rgba(31, 157, 155, 0.3);
+  margin-top: 4px;
+}
+
+.colIncluded {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1F9D9B !important;
+  text-align: right;
+}
+
+.col1 {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.col2 {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.9rem;
+  color: #6B7280;
+}
+
+.colName {
+  font-weight: 700;
+  color: #132444 !important;
+}
+
+.col3 {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.85rem;
+  color: #6B7280;
+}
+
+.col4 {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.9rem;
+  color: #6B7280;
+  text-align: right;
+}
+
+.colCost {
+  font-weight: 700;
+  color: #132444 !important;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  margin-top: 16px;
+  border-top: 2px solid #2A4391;
+}
+
+.totalLabel {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #132444;
+}
+
+.totalAmount {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #2A4391;
+}
+
+.note {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.9rem;
+  color: #6B7280;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+.terms {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+  max-width: 600px;
+}
+
+.term {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #DDE2E7;
+}
+
+.termLabel {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6B7280;
+  margin-bottom: 6px;
+}
+
+.termValue {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #132444;
+}
+
+/* Optional section */
+.optionalSection {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid #DDE2E7;
+}
+
+.optionalTitle {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #132444;
+  margin-bottom: 6px;
+}
+
+.optionalSubtitle {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.85rem;
+  color: #6B7280;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .pricing {
+    padding: 48px 0;
+  }
+
+  .header,
+  .row,
+  .migrationRow {
+    grid-template-columns: 30px 1fr 80px;
+  }
+
+  .col3 {
+    display: none;
+  }
+
+  .terms {
+    grid-template-columns: 1fr 1fr;
+  }
+}

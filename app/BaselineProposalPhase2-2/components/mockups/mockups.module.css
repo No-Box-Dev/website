@@ -1,0 +1,571 @@
+/* =========================================
+   Phase 2-2 Mockup Styles
+   ========================================= */
+
+.screen {
+  padding: 20px;
+  background: var(--bl-cream);
+  font-family: var(--font-body);
+}
+
+.screenDark {
+  composes: screen;
+  background: var(--bl-deep-inhale);
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--bl-sandstone);
+  padding: 16px;
+}
+
+/* -- Audio Fix Mockup -- */
+.audioScreen {
+  composes: screenDark;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+}
+
+.audioWave {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 24px;
+}
+
+.audioBar {
+  width: 4px;
+  border-radius: 2px;
+  background: var(--bl-serene-ash);
+}
+
+.audioTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--bl-cream);
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.audioSub {
+  font-size: 0.8rem;
+  color: var(--bl-serene-ash);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.audioMuteIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: var(--bl-cream);
+}
+
+.audioStatus {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #28CA41;
+  padding: 6px 14px;
+  border-radius: 100px;
+  background: rgba(40, 202, 65, 0.1);
+}
+
+/* -- Tool Rotation Mockup -- */
+.rotationScreen {
+  composes: screen;
+  padding: 24px;
+}
+
+.rotationHeader {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--bl-serene-ash);
+  margin-bottom: 16px;
+}
+
+.rotationCards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rotationCard {
+  composes: card;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rotationNum {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.rotationDone {
+  background: var(--bl-midnight);
+  color: var(--bl-cream);
+}
+
+.rotationCurrent {
+  background: var(--bl-serene-ash);
+  color: white;
+}
+
+.rotationPending {
+  background: var(--bl-sandstone);
+  color: var(--bl-serene-ash);
+}
+
+.rotationInfo {
+  flex: 1;
+}
+
+.rotationName {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--bl-midnight);
+}
+
+.rotationMeta {
+  font-size: 0.72rem;
+  color: var(--bl-serene-ash);
+  margin-top: 2px;
+}
+
+.rotationBadge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.badgeCompleted {
+  background: rgba(40, 202, 65, 0.1);
+  color: #28CA41;
+}
+
+.badgeNew {
+  background: var(--bl-midnight);
+  color: var(--bl-cream);
+}
+
+/* -- Background Audio Mockup -- */
+.bgAudioScreen {
+  composes: screenDark;
+  padding: 24px;
+  min-height: 360px;
+}
+
+.lockScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lockTime {
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: white;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.lockDate {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 32px;
+}
+
+.nowPlaying {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.npHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.npThumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: var(--bl-midnight);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.npTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: white;
+}
+
+.npArtist {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 2px;
+}
+
+.npProgress {
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.npProgressFill {
+  height: 100%;
+  background: white;
+  border-radius: 2px;
+}
+
+.npControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  color: white;
+}
+
+.npBtn {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+}
+
+.npBtnPlay {
+  width: 36px;
+  height: 36px;
+  opacity: 1;
+}
+
+/* -- Effectiveness Mockup -- */
+.effectivenessScreen {
+  composes: screen;
+  padding: 24px;
+}
+
+.effTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+  margin-bottom: 4px;
+}
+
+.effSub {
+  font-size: 0.8rem;
+  color: var(--bl-serene-ash);
+  margin-bottom: 20px;
+}
+
+.effQuestion {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.effStars {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.effStar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.effStarActive {
+  background: var(--bl-midnight);
+  color: var(--bl-cream);
+}
+
+.effStarInactive {
+  background: var(--bl-sandstone);
+  color: var(--bl-serene-ash);
+}
+
+.effTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.effTag {
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1.5px solid var(--bl-sandstone);
+  color: var(--bl-midnight);
+}
+
+.effTagActive {
+  composes: effTag;
+  background: var(--bl-midnight);
+  border-color: var(--bl-midnight);
+  color: var(--bl-cream);
+}
+
+.effBtn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border-radius: 100px;
+  background: var(--bl-midnight);
+  color: var(--bl-cream);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: none;
+  text-align: center;
+}
+
+/* -- Recommendation Mockup -- */
+.recoScreen {
+  composes: screen;
+  padding: 24px;
+}
+
+.recoLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--bl-serene-ash);
+  margin-bottom: 8px;
+}
+
+.recoTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+  margin-bottom: 4px;
+}
+
+.recoReason {
+  font-size: 0.8rem;
+  color: var(--bl-serene-ash);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.recoCard {
+  composes: card;
+  margin-bottom: 12px;
+}
+
+.recoCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.recoIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--bl-deep-inhale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.recoName {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--bl-midnight);
+}
+
+.recoDuration {
+  font-size: 0.75rem;
+  color: var(--bl-serene-ash);
+  margin-top: 2px;
+}
+
+.recoMatch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.recoMatchBar {
+  flex: 1;
+  height: 4px;
+  background: var(--bl-sandstone);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.recoMatchFill {
+  height: 100%;
+  background: var(--bl-midnight);
+  border-radius: 2px;
+}
+
+.recoMatchLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+  flex-shrink: 0;
+}
+
+.recoFactors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.recoFactor {
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 100px;
+  background: rgba(58, 78, 89, 0.08);
+  color: var(--bl-midnight);
+}
+
+/* -- History Mockup -- */
+.historyScreen {
+  composes: screen;
+  padding: 24px;
+}
+
+.historyTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+  margin-bottom: 4px;
+}
+
+.historySub {
+  font-size: 0.8rem;
+  color: var(--bl-serene-ash);
+  margin-bottom: 20px;
+}
+
+.historyStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.historyStat {
+  composes: card;
+  text-align: center;
+  padding: 14px 8px;
+}
+
+.historyStatValue {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--bl-midnight);
+  display: block;
+}
+
+.historyStatLabel {
+  font-size: 0.65rem;
+  color: var(--bl-serene-ash);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.historyItem {
+  composes: card;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+}
+
+.historyDate {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--bl-serene-ash);
+  text-transform: uppercase;
+  width: 40px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.historyInfo {
+  flex: 1;
+}
+
+.historyName {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--bl-midnight);
+}
+
+.historyEmotion {
+  font-size: 0.72rem;
+  color: var(--bl-serene-ash);
+  margin-top: 2px;
+}
+
+.historyRating {
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  color: var(--bl-midnight);
+}

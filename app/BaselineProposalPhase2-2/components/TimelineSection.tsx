@@ -1,4 +1,5 @@
 import styles from "../../BaselineProposalPhase2/components/TimelineSection.module.css";
+import local from "./TimelineSection.module.css";
 
 const phases = [
   {
@@ -21,9 +22,15 @@ const phases = [
   },
   {
     num: "04",
-    title: "Polish & Launch",
+    title: "Testing & Feedback",
     time: "Week 4",
-    desc: "Integration testing, edge cases, App Store prep, final QA",
+    desc: "Integration testing, edge cases, bug fixes, user feedback",
+  },
+  {
+    num: "05",
+    title: "Launch",
+    time: "Week 5",
+    desc: "App Store review prep, deployment, go-live support",
   },
 ];
 
@@ -33,7 +40,7 @@ export default function TimelineSection() {
       <div className={styles.container}>
         <span className={styles.label}>Timeline</span>
         <h2 className={styles.title}>Development Roadmap</h2>
-        <div className={styles.track}>
+        <div className={`${styles.track} ${local.track}`}>
           {phases.map((p) => (
             <div key={p.num} className={styles.phase}>
               <div className={styles.node}>{p.num}</div>

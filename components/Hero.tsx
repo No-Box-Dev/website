@@ -17,12 +17,12 @@ export default function Hero() {
     <section className={styles.hero} data-glow="dark">
       <div className={styles.content}>
         <h1 ref={headlineRef} className={styles.headline}>
-          We design products
+          We build products
           <br />
           that <span className={styles.accent}>understand</span> people
         </h1>
         <p className={styles.tagline}>
-          Where behavioral science meets beautiful engineering.
+          Where psychology meets beautiful engineering.
         </p>
       </div>
       <div className={styles.scrollIndicator}>

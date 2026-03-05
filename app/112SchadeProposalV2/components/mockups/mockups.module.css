@@ -1,0 +1,1631 @@
+/* =========================================
+   Shared mockup styles — 112Schade brand
+   Diep Blauw #2A4391 | Turquoise #1F9D9B
+   Zilver Nevel #DDE2E7 | Nachtblauw #132444
+   ========================================= */
+
+/* -- Claims Dashboard -- */
+.claimsScreen {
+  padding: 24px;
+  background: #F4F6F8;
+  font-family: 'Titillium Web', var(--font-body);
+}
+
+.claimsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.claimsTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #132444;
+}
+
+.claimsDate {
+  font-size: 0.75rem;
+  color: #6B7280;
+}
+
+.claimsTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #DDE2E7;
+}
+
+.claimsTable th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6B7280;
+  background: #F9FAFB;
+  border-bottom: 1px solid #DDE2E7;
+}
+
+.claimsTable td {
+  padding: 14px 16px;
+  font-size: 0.82rem;
+  color: #132444;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.statusBadge {
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.statusActive {
+  background: rgba(31, 157, 155, 0.1);
+  color: #1F9D9B;
+}
+
+.statusPending {
+  background: rgba(255, 189, 46, 0.1);
+  color: #D97706;
+}
+
+.statusResolved {
+  background: rgba(40, 202, 65, 0.1);
+  color: #16A34A;
+}
+
+/* -- AI Analysis -- */
+.aiScreen {
+  padding: 24px;
+  background: #F4F6F8;
+  font-family: 'Titillium Web', var(--font-body);
+}
+
+.aiHeader {
+  margin-bottom: 20px;
+}
+
+.aiTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #132444;
+  margin-bottom: 4px;
+}
+
+.aiSub {
+  font-size: 0.75rem;
+  color: #6B7280;
+}
+
+.aiCard {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #DDE2E7;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.aiCardTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #132444;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.aiDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1F9D9B;
+}
+
+.aiTag {
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: rgba(42, 67, 145, 0.1);
+  color: #2A4391;
+}
+
+.aiList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.aiListItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #374151;
+}
+
+.aiCheck {
+  color: #1F9D9B;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.confidenceBar {
+  width: 100%;
+  height: 6px;
+  background: #DDE2E7;
+  border-radius: 3px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.confidenceFill {
+  height: 100%;
+  background: linear-gradient(90deg, #2A4391, #1F9D9B);
+  border-radius: 3px;
+}
+
+.confidenceLabel {
+  font-size: 0.7rem;
+  color: #6B7280;
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* -- Messaging -- */
+.msgScreen {
+  padding: 0;
+  background: white;
+  font-family: 'Titillium Web', var(--font-body);
+  display: flex;
+  flex-direction: column;
+  min-height: 680px;
+}
+
+.msgHeader {
+  padding: 16px 20px;
+  background: #132444;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.msgBack {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.msgHeaderInfo {
+  flex: 1;
+}
+
+.msgHeaderTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: white;
+}
+
+.msgHeaderSub {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.msgBody {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #F4F6F8;
+}
+
+.msgBubble {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.msgIncoming {
+  composes: msgBubble;
+  background: white;
+  border: 1px solid #DDE2E7;
+  color: #374151;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.msgOutgoing {
+  composes: msgBubble;
+  background: #2A4391;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.msgTime {
+  font-size: 0.65rem;
+  color: #9CA3AF;
+  margin-top: 4px;
+}
+
+.msgOutgoing .msgTime {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: right;
+}
+
+.msgInputBar {
+  padding: 12px 16px;
+  background: white;
+  border-top: 1px solid #DDE2E7;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.msgInput {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: 1px solid #DDE2E7;
+  background: #F4F6F8;
+  font-size: 0.82rem;
+  color: #9CA3AF;
+}
+
+.msgSend {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #1F9D9B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.msgSendArrow {
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* -- Stats Dashboard -- */
+.statsScreen {
+  padding: 24px;
+  background: #F4F6F8;
+  font-family: 'Titillium Web', var(--font-body);
+}
+
+.statsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.statsTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #132444;
+}
+
+.statsDate {
+  font-size: 0.75rem;
+  color: #6B7280;
+}
+
+.metricsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.metricCard {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #DDE2E7;
+  padding: 16px;
+}
+
+.metricLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6B7280;
+  margin-bottom: 6px;
+}
+
+.metricValue {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #132444;
+}
+
+.metricChange {
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.metricUp {
+  color: #1F9D9B;
+}
+
+.metricDown {
+  color: #DC2626;
+}
+
+.chartCard {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #DDE2E7;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.chartTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #132444;
+  margin-bottom: 16px;
+}
+
+.chartBars {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 80px;
+}
+
+.chartBar {
+  flex: 1;
+  border-radius: 3px 3px 0 0;
+  min-height: 6px;
+}
+
+.chartBarBlue {
+  background: #2A4391;
+  opacity: 0.8;
+}
+
+.chartBarNavy {
+  background: #1F9D9B;
+  opacity: 0.6;
+}
+
+.engagementRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.engagementCard {
+  composes: metricCard;
+  text-align: center;
+  padding: 20px 12px;
+}
+
+.engagementValue {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1F9D9B;
+  display: block;
+}
+
+.engagementLabel {
+  font-size: 0.7rem;
+  color: #6B7280;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* -- Automation -- */
+.autoScreen {
+  padding: 24px;
+  background: #F4F6F8;
+  font-family: 'Titillium Web', var(--font-body);
+}
+
+.autoHeader {
+  margin-bottom: 20px;
+}
+
+.autoTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #132444;
+  margin-bottom: 4px;
+}
+
+.autoSub {
+  font-size: 0.75rem;
+  color: #6B7280;
+}
+
+.ruleCard {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #DDE2E7;
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ruleIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(42, 67, 145, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+}
+
+.ruleInfo {
+  flex: 1;
+}
+
+.ruleName {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #132444;
+}
+
+.ruleDesc {
+  font-size: 0.75rem;
+  color: #6B7280;
+  margin-top: 2px;
+}
+
+.ruleToggle {
+  width: 44px;
+  height: 26px;
+  border-radius: 13px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.ruleToggleOn {
+  composes: ruleToggle;
+  background: #1F9D9B;
+}
+
+.ruleToggleOff {
+  composes: ruleToggle;
+  background: #DDE2E7;
+}
+
+.ruleToggleKnob {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.ruleToggleOn .ruleToggleKnob {
+  right: 2px;
+}
+
+.ruleToggleOff .ruleToggleKnob {
+  left: 2px;
+}
+
+/* -- iOS App -- */
+.iosScreen {
+  padding: 0;
+  background: white;
+  font-family: 'Titillium Web', var(--font-body);
+  display: flex;
+  flex-direction: column;
+  min-height: 680px;
+}
+
+.iosHeader {
+  padding: 16px 20px 12px;
+  background: #132444;
+}
+
+.iosGreeting {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.iosName {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  margin-top: 2px;
+}
+
+.iosBody {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.iosClaimCard {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #DDE2E7;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.iosClaimHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.iosClaimId {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6B7280;
+}
+
+.iosClaimType {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #132444;
+  margin-bottom: 4px;
+}
+
+.iosClaimDate {
+  font-size: 0.75rem;
+  color: #9CA3AF;
+}
+
+.iosProgressBar {
+  width: 100%;
+  height: 4px;
+  background: #DDE2E7;
+  border-radius: 2px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.iosProgressFill {
+  height: 100%;
+  background: #1F9D9B;
+  border-radius: 2px;
+}
+
+.iosNewClaim {
+  padding: 14px;
+  border-radius: 12px;
+  background: #2A4391;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.iosTabBar {
+  display: flex;
+  border-top: 1px solid #DDE2E7;
+  padding: 10px 0 20px;
+}
+
+.iosTab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.65rem;
+  color: #9CA3AF;
+}
+
+.iosTabActive {
+  composes: iosTab;
+  color: #2A4391;
+}
+
+.iosTabIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background: currentColor;
+  opacity: 0.3;
+}
+
+.iosTabActive .iosTabIcon {
+  opacity: 0.6;
+}
+
+/* -- Insurer Email Intelligence -- */
+.emailScreen {
+  padding: 24px;
+  background: #F4F6F8;
+  font-family: 'Titillium Web', var(--font-body);
+}
+
+.emailHeader {
+  margin-bottom: 20px;
+}
+
+.emailTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #132444;
+  margin-bottom: 4px;
+}
+
+.emailSub {
+  font-size: 0.75rem;
+  color: #6B7280;
+}
+
+.emailCard {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #DDE2E7;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.emailFrom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.emailAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #2A4391;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+.emailSender {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #132444;
+}
+
+.emailDate {
+  font-size: 0.7rem;
+  color: #9CA3AF;
+}
+
+.emailSubject {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #132444;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.aiExtraction {
+  background: rgba(31, 157, 155, 0.04);
+  border: 1px solid rgba(31, 157, 155, 0.15);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.aiExtractionTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1F9D9B;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.aiExtractionItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: #374151;
+  padding: 4px 0;
+}
+
+.aiExtractionLabel {
+  font-weight: 700;
+  color: #132444;
+  min-width: 70px;
+  flex-shrink: 0;
+}
+
+/* -- Marketing Page -- */
+.marketingScreen {
+  padding: 0;
+  background: white;
+  font-family: 'Titillium Web', var(--font-body);
+}
+
+.marketingHero {
+  padding: 32px 24px;
+  background: linear-gradient(135deg, #132444 0%, #2A4391 100%);
+  text-align: center;
+}
+
+.marketingLogo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.marketingH1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.marketingHeroSub {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.marketingCTA {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #1F9D9B;
+  color: white;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.marketingFeatures {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.marketingFeature {
+  padding: 16px;
+  background: #F4F6F8;
+  border-radius: 10px;
+  border: 1px solid #DDE2E7;
+  text-align: center;
+}
+
+.marketingFeatureIcon {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.marketingFeatureName {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #132444;
+}
+
+.marketingTrust {
+  padding: 20px 24px;
+  text-align: center;
+  border-top: 1px solid #DDE2E7;
+}
+
+.marketingTrustLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6B7280;
+  margin-bottom: 10px;
+}
+
+.marketingTrustLogos {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.marketingTrustLogo {
+  width: 40px;
+  height: 20px;
+  background: #DDE2E7;
+  border-radius: 4px;
+}
+
+/* -- Selector -- */
+.selectorWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.selectorBar {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.selectorBtn {
+  padding: 6px 14px;
+  border-radius: 100px;
+  border: 1px solid #DDE2E7;
+  background: white;
+  color: #6B7280;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: 'Titillium Web', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.selectorBtn:hover {
+  border-color: #2A4391;
+  color: #2A4391;
+}
+
+.selectorBtnActive {
+  composes: selectorBtn;
+  background: #2A4391;
+  border-color: #2A4391;
+  color: white;
+}
+
+/* -- Design Mockups Shared -- */
+.designScreen {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #DDE2E7;
+  overflow: hidden;
+  font-family: 'Titillium Web', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.designHeader {
+  padding: 14px 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #132444;
+  border-bottom: 1px solid #F3F4F6;
+  background: #F9FAFB;
+  flex-shrink: 0;
+}
+
+.designContent {
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.designCaption {
+  padding: 10px 20px;
+  font-size: 0.72rem;
+  color: #6B7280;
+  text-align: center;
+  border-top: 1px solid #F3F4F6;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+/* -- 1. Brand Identity -- */
+.brandCompare {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  flex: 1;
+}
+
+.brandOld,
+.brandNew {
+  flex: 1;
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.brandOld {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+}
+
+.brandNew {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+}
+
+.brandArrow {
+  flex-shrink: 0;
+}
+
+.brandLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9CA3AF;
+  margin-bottom: 10px;
+}
+
+.brandColorRow {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.brandSwatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.brandLogoOld,
+.brandLogoNew {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.brandLogoOld { color: #92400E; }
+.brandLogoNew { color: #132444; }
+
+.brandShieldOld,
+.brandShieldNew {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 900;
+  color: white;
+}
+
+.brandShieldOld { background: #E8A825; }
+.brandShieldNew { background: linear-gradient(135deg, #2A4391, #1F9D9B); }
+
+.brandBtnOld,
+.brandBtnNew {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: white;
+}
+
+.brandBtnOld { background: #E8A825; }
+.brandBtnNew { background: #2A4391; }
+
+.brandInputOld,
+.brandInputNew {
+  width: 70%;
+  height: 10px;
+  border-radius: 5px;
+  margin: 8px auto 0;
+}
+
+.brandInputOld {
+  border: 1.5px solid #FDE68A;
+  background: #FFFBEB;
+}
+
+.brandInputNew {
+  border: 1.5px solid #BFDBFE;
+  background: #EFF6FF;
+}
+
+.brandCardOld,
+.brandCardNew {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brandCardOld { background: rgba(232, 168, 37, 0.06); border: 1px solid #FDE68A; }
+.brandCardNew { background: rgba(42, 67, 145, 0.04); border: 1px solid #BFDBFE; }
+
+.brandCardLine {
+  height: 4px;
+  border-radius: 2px;
+}
+
+/* -- 2. Component Library -- */
+.compGrid {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.compSection {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.compSection:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.compLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9CA3AF;
+  margin-bottom: 8px;
+}
+
+.compType {
+  margin-bottom: 4px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.compBtnPrimary,
+.compBtnSecondary,
+.compBtnOutline {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.compBtnPrimary {
+  background: #2A4391;
+  color: white;
+}
+
+.compBtnSecondary {
+  background: #1F9D9B;
+  color: white;
+}
+
+.compBtnOutline {
+  background: transparent;
+  color: #2A4391;
+  border: 1.5px solid #2A4391;
+}
+
+.compBtnGhost {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: transparent;
+  color: #6B7280;
+}
+
+.compInput,
+.compInputFocus {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: #9CA3AF;
+  background: white;
+  border: 1.5px solid #DDE2E7;
+}
+
+.compInputFocus {
+  border-color: #2A4391;
+  color: #132444;
+  box-shadow: 0 0 0 3px rgba(42, 67, 145, 0.1);
+}
+
+.compColorBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.compColorSwatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.compColorName {
+  font-size: 0.55rem;
+  color: #9CA3AF;
+  white-space: nowrap;
+}
+
+/* -- 3. Dashboard Preview -- */
+.dashPreview {
+  display: flex;
+  flex: 1;
+}
+
+.dashSidebar {
+  width: 100px;
+  background: #132444;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.dashSidebarLogo {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #1F9D9B;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.dashNavItem,
+.dashNavActive {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dashNavActive {
+  background: rgba(31, 157, 155, 0.2);
+  color: #1F9D9B;
+  font-weight: 700;
+}
+
+.dashMain {
+  flex: 1;
+  padding: 12px;
+  background: #F4F6F8;
+}
+
+.dashTopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+}
+
+.dashAvatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #2A4391;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+.dashCards {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.dashCard {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #DDE2E7;
+  text-align: center;
+}
+
+.dashCardNum {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2A4391;
+}
+
+.dashCardLabel {
+  font-size: 0.6rem;
+  color: #6B7280;
+  margin-top: 2px;
+}
+
+.dashNotif {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #DC2626;
+  color: white;
+  font-size: 0.55rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashNotifWhite {
+  composes: dashNotif;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dashTable {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #DDE2E7;
+  overflow: hidden;
+}
+
+.dashTableHead {
+  display: grid;
+  grid-template-columns: 80px 1fr 90px;
+  padding: 6px 12px;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9CA3AF;
+  background: #F9FAFB;
+  border-bottom: 1px solid #DDE2E7;
+}
+
+.dashRow {
+  display: grid;
+  grid-template-columns: 80px 1fr 90px;
+  padding: 8px 12px;
+  font-size: 0.7rem;
+  color: #374151;
+  border-bottom: 1px solid #F3F4F6;
+  align-items: center;
+}
+
+.dashRow:last-child {
+  border-bottom: none;
+}
+
+/* -- 4. Responsive Devices -- */
+.respDevices {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+  flex: 1;
+}
+
+.respDesktop {
+  width: 50%;
+  background: white;
+  border: 1.5px solid #DDE2E7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.respBar {
+  padding: 6px 10px;
+  background: #F9FAFB;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-bottom: 1px solid #DDE2E7;
+}
+
+.respDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #DDE2E7;
+}
+
+.respUrl {
+  font-size: 0.5rem;
+  color: #9CA3AF;
+  margin-left: 8px;
+  background: #F3F4F6;
+  padding: 1px 8px;
+  border-radius: 3px;
+}
+
+.respContent {
+  padding: 8px;
+}
+
+.respNav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  background: #132444;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+
+.respNavLogo {
+  font-size: 0.5rem;
+  font-weight: 900;
+  color: #1F9D9B;
+}
+
+.respNavLink {
+  width: 16px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 1px;
+}
+
+.respHero {
+  background: linear-gradient(135deg, #2A4391, #1F9D9B);
+  border-radius: 6px;
+  padding: 14px 12px;
+  margin-bottom: 8px;
+}
+
+.respHeroText {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.respBlock {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  height: 8px;
+}
+
+.respBlockBtn {
+  width: 40%;
+  height: 10px;
+  background: white;
+  border-radius: 4px;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+.respGrid3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+
+.respCardPlaceholder {
+  height: 32px;
+  background: #F4F6F8;
+  border-radius: 4px;
+  border: 1px solid #DDE2E7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.respCardIcon {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(31, 157, 155, 0.2);
+}
+
+.respTablet {
+  width: 30%;
+  background: #374151;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.respTabletContent {
+  background: white;
+  border-radius: 7px;
+  min-height: 160px;
+  overflow: hidden;
+}
+
+.respTabletNav {
+  height: 5px;
+  background: #132444;
+  margin-bottom: 4px;
+}
+
+.respPhone {
+  width: 18%;
+  background: #132444;
+  border-radius: 14px;
+  padding: 3px;
+  position: relative;
+}
+
+.respNotch {
+  width: 40%;
+  height: 4px;
+  background: #0A1A30;
+  border-radius: 0 0 4px 4px;
+  margin: 0 auto 4px;
+}
+
+.respPhoneContent {
+  background: white;
+  border-radius: 11px;
+  padding: 8px;
+  min-height: 140px;
+}
+
+.respPhoneNav {
+  height: 5px;
+  background: #2A4391;
+  border-radius: 2px;
+  margin-bottom: 6px;
+}
+
+.respPhoneCards {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.respPhoneCards .respCardPlaceholder {
+  height: 22px;
+}
+
+/* -- 5. Client Portal -- */
+.portalScreen {
+  overflow: hidden;
+}
+
+.portalHeader {
+  padding: 12px 20px;
+  background: #132444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.portalBody {
+  padding: 16px 20px;
+  background: #F4F6F8;
+  flex: 1;
+}
+
+.portalWelcome {
+  margin-bottom: 16px;
+}
+
+.portalClaimCard {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #DDE2E7;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.portalClaimTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.portalProgress {
+  width: 100%;
+  height: 4px;
+  background: #DDE2E7;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.portalProgressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #2A4391, #1F9D9B);
+  border-radius: 2px;
+}
+
+.portalSteps {
+  display: flex;
+  gap: 4px;
+}
+
+.portalStepDone,
+.portalStepCurrent,
+.portalStepTodo {
+  flex: 1;
+  text-align: center;
+  font-size: 0.6rem;
+  padding: 4px 0;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.portalStepDone {
+  background: rgba(31, 157, 155, 0.1);
+  color: #1F9D9B;
+}
+
+.portalStepCurrent {
+  background: #2A4391;
+  color: white;
+}
+
+.portalStepTodo {
+  background: #F3F4F6;
+  color: #9CA3AF;
+}
+
+.portalActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.portalAction {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #DDE2E7;
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #132444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.portalActionIcon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.portalHeaderLogo {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #2A4391, #1F9D9B);
+  color: white;
+  font-size: 0.55rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portalSecondClaim {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #DDE2E7;
+  padding: 12px 16px;
+  margin-top: 10px;
+}

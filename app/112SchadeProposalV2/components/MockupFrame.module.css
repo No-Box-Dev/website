@@ -1,0 +1,144 @@
+.phoneFrame {
+  width: 340px;
+  max-width: 100%;
+  background: white;
+  border-radius: 44px;
+  border: 7px solid #132444;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.15);
+}
+
+.statusBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px 8px;
+  background: white;
+}
+
+.time {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #132444;
+}
+
+.icons {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.iconBar {
+  width: 16px;
+  height: 10px;
+  display: flex;
+  gap: 1px;
+  align-items: flex-end;
+}
+
+.iconBar span {
+  width: 3px;
+  background: #132444;
+  border-radius: 1px;
+}
+
+.iconBar span:nth-child(1) { height: 4px; }
+.iconBar span:nth-child(2) { height: 6px; }
+.iconBar span:nth-child(3) { height: 8px; }
+.iconBar span:nth-child(4) { height: 10px; }
+
+.battery {
+  width: 22px;
+  height: 10px;
+  border: 1.5px solid #132444;
+  border-radius: 2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1.5px;
+}
+
+.battery::after {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 2px;
+  width: 2px;
+  height: 4px;
+  background: #132444;
+  border-radius: 0 1px 1px 0;
+}
+
+.batteryFill {
+  width: 70%;
+  height: 100%;
+  background: #132444;
+  border-radius: 1px;
+}
+
+.phoneContent {
+  min-height: 680px;
+}
+
+/* -- Web frame -- */
+.webFrame {
+  width: 100%;
+  max-width: 900px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-shadow: 0 16px 64px rgba(0, 0, 0, 0.1);
+}
+
+.browserBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #F5F5F5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dotRed { background: #FF5F57; }
+.dotYellow { background: #FFBD2E; }
+.dotGreen { background: #28CA41; }
+
+.urlBar {
+  flex: 1;
+  padding: 6px 12px;
+  background: white;
+  border-radius: 6px;
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.75rem;
+  color: #6B7280;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.webContent {
+  min-height: 400px;
+}
+
+@media (max-width: 768px) {
+  .phoneFrame {
+    width: 300px;
+    border-radius: 36px;
+    border-width: 6px;
+  }
+
+  .phoneContent {
+    min-height: 580px;
+  }
+}

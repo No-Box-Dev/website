@@ -1,0 +1,212 @@
+.feature {
+  padding: 80px 0;
+}
+
+.featureLight {
+  composes: feature;
+  background: #F4F6F8;
+}
+
+.featureNavy {
+  composes: feature;
+  background: linear-gradient(135deg, #2A4391 0%, #1E3670 50%, #132444 100%);
+}
+
+.featureTeal {
+  composes: feature;
+  background: linear-gradient(135deg, #132444 0%, #1A3352 50%, #132444 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 3vw, 3rem);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.gridReverse {
+  composes: grid;
+}
+
+.gridReverse > :first-child {
+  order: 2;
+}
+
+.gridReverse > :last-child {
+  order: 1;
+}
+
+.featureNum {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.featureNumLight {
+  composes: featureNum;
+  color: rgba(42, 67, 145, 0.15);
+}
+
+.featureNumDark {
+  composes: featureNum;
+  color: rgba(31, 157, 155, 0.25);
+}
+
+.title {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.titleLight {
+  composes: title;
+  color: #132444;
+}
+
+.titleDark {
+  composes: title;
+  color: white;
+}
+
+.price {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2A4391;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.priceIncluded {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1F9D9B;
+  background: rgba(31, 157, 155, 0.1);
+  border: 1px solid rgba(31, 157, 155, 0.2);
+  padding: 4px 14px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.priceOptional {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #D97706;
+  background: rgba(217, 119, 6, 0.08);
+  border: 1px solid rgba(217, 119, 6, 0.2);
+  padding: 4px 14px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.featureNavy .price,
+.featureTeal .price {
+  color: #1F9D9B;
+}
+
+.featureNavy .bulletDot,
+.featureTeal .bulletDot {
+  background: #1F9D9B;
+  box-shadow: 0 0 6px rgba(31, 157, 155, 0.6), 0 0 14px rgba(31, 157, 155, 0.4), 0 0 24px rgba(31, 157, 155, 0.2);
+}
+
+.featureNavy .bulletLine,
+.featureTeal .bulletLine {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.desc {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.descLight {
+  composes: desc;
+  color: #132444;
+  opacity: 0.65;
+}
+
+.descDark {
+  composes: desc;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.items li {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.88rem;
+  padding: 7px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.itemsLight li {
+  color: #132444;
+}
+
+.itemsDark li {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.bullet {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 28px;
+}
+
+.bulletLine {
+  width: 14px;
+  height: 1px;
+  background: #6B7280;
+  flex-shrink: 0;
+}
+
+.bulletDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2A4391;
+  box-shadow: 0 0 6px rgba(42, 67, 145, 0.6), 0 0 14px rgba(42, 67, 145, 0.4), 0 0 24px rgba(42, 67, 145, 0.2);
+  flex-shrink: 0;
+}
+
+.itemsDark .bulletLine {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 768px) {
+  .feature {
+    padding: 48px 0;
+  }
+
+  .grid,
+  .gridReverse {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .gridReverse > :first-child {
+    order: 1;
+  }
+
+  .gridReverse > :last-child {
+    order: 2;
+  }
+}

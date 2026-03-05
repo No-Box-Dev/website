@@ -216,4 +216,10 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .grid > :last-child,
+  .gridReverse > :last-child {
+    display: flex;
+    justify-content: center;
+  }
 }

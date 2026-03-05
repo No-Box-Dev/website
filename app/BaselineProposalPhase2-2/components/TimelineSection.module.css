@@ -1,0 +1,13 @@
+.track {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .track {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

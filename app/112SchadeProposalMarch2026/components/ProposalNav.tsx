@@ -41,6 +41,11 @@ export default function ProposalNav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const handleLogout = () => {
+    sessionStorage.removeItem("proposal_112schade_authed");
+    window.location.href = "/";
+  };
+
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -70,6 +75,12 @@ export default function ProposalNav() {
               </button>
             </span>
           ))}
+          <span className={styles.linkWrap}>
+            <span className={styles.separator}>|</span>
+            <button className={styles.logoutLink} onClick={handleLogout}>
+              Uitloggen
+            </button>
+          </span>
         </div>
       </div>
     </nav>

@@ -100,6 +100,32 @@
   color: white;
 }
 
+.logoutLink {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  background: #9B78F4;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.logoutLink:hover {
+  background: #7B5CD4;
+}
+
+.atTop .logoutLink {
+  background: #9B78F4;
+  color: white;
+}
+
+.atTop .logoutLink:hover {
+  background: #7B5CD4;
+}
+
 @media (max-width: 768px) {
   .links {
     display: none;

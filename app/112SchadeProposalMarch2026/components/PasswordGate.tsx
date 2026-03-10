@@ -46,7 +46,7 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
           height={80}
           className={styles.logoMark}
         />
-        <p className={styles.sub}>Voer het wachtwoord in om dit voorstel te bekijken</p>
+        <p className={styles.sub}>Voer het wachtwoord in om toegang te krijgen tot het dashboard.</p>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.inputWrap}>
             <input
@@ -78,7 +78,7 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
             </button>
           </div>
           <button className={styles.btn} type="submit">
-            Bekijk Voorstel
+            Open Dashboard
           </button>
         </form>
         {error && <p className={styles.error}>Onjuist wachtwoord</p>}

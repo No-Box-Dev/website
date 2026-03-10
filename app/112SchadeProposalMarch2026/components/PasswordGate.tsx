@@ -40,7 +40,7 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
       <div className={styles.glow} />
       <div className={`${styles.card} ${error ? styles.shake : ""}`}>
         <Image
-          src="/images/112schade-logo.png"
+          src="/images/112schade-logo-white.svg"
           alt="112 Schade logo"
           width={200}
           height={80}

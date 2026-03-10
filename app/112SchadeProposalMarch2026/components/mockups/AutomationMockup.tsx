@@ -1,12 +1,12 @@
 import styles from "./mockups.module.css";
 
 const rules = [
-  { icon: "🔄", name: "Auto-Toewijzing Schades", desc: "Nieuwe schades routeren naar gespecialiseerde behandelaars", on: true },
-  { icon: "⏰", name: "Opvolg-Herinneringen", desc: "Behandelaar melden na 48 uur inactiviteit", on: true },
-  { icon: "📧", name: "Statusupdates", desc: "Klant e-mailen bij statuswijziging", on: true },
-  { icon: "🚨", name: "Escalatie bij Stilstand", desc: "Schades escaleren die 5+ dagen stilstaan", on: true },
-  { icon: "📊", name: "Weekrapporten", desc: "Wekelijks overzicht naar management sturen", on: false },
-  { icon: "🤖", name: "AI Voorselectie", desc: "Automatisch categoriseren voor behandelaar-review", on: true },
+  { icon: "AT", name: "Auto-Toewijzing Schades", desc: "Nieuwe schades routeren naar gespecialiseerde behandelaars", on: true },
+  { icon: "OH", name: "Opvolg-Herinneringen", desc: "Behandelaar melden na 48 uur inactiviteit", on: true },
+  { icon: "SU", name: "Statusupdates", desc: "Klant e-mailen bij statuswijziging", on: true },
+  { icon: "ES", name: "Escalatie bij Stilstand", desc: "Schades escaleren die 5+ dagen stilstaan", on: true },
+  { icon: "WR", name: "Weekrapporten", desc: "Wekelijks overzicht naar management sturen", on: false },
+  { icon: "AI", name: "AI Voorselectie", desc: "Automatisch categoriseren voor behandelaar-review", on: true },
 ];
 
 export default function AutomationMockup() {

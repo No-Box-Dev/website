@@ -72,7 +72,7 @@
   padding: 1rem 1.5rem;
   font-size: 1rem;
   color: var(--text-primary);
-  background: transparent;
+  background: #FFFFFF;
 }
 
 .input::placeholder {
@@ -85,7 +85,7 @@
   font-size: 0.9rem;
   font-weight: 700;
   color: white;
-  background: var(--dark);
+  background: var(--purple);
   border-radius: 100px;
   margin: 4px;
   transition: background 0.3s ease;

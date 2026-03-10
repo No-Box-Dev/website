@@ -9,18 +9,10 @@ export default function MigrationSection() {
             <span className={styles.badge}>Inbegrepen zonder extra kosten</span>
             <h2 className={styles.title}>Platformmigratie</h2>
             <p className={styles.desc}>
-              Het Bubble-prototype was een essentiële stap — het stelde ons in staat
-              het concept te valideren, workflows te testen en het product te vormen
-              met echte gebruikers. Dat werk is niet verloren. Elke workflow,
-              automatiseringsregel en elk stuk logica uit Bubble wordt de blauwdruk
-              voor het productieplatform.
+              Voor de volgende fase in de ontwikkeling van 112Schade adviseren wij een migratie van de huidige Bubble-applicatie naar een eigen codebase. Bubble heeft uitstekend gefunctioneerd voor het ontwikkelen en valideren van de eerste versie van het product en het testen van workflows met echte gebruikers. Naarmate het platform verder groeit, zien we echter dat de mogelijkheden en flexibiliteit van het platform steeds vaker een beperking vormen voor verdere productontwikkeling.
             </p>
             <p className={styles.desc}>
-              Voor de volgende fase adviseren we een op maat gebouwde codebase.
-              Dit is niet opnieuw beginnen — het is een stap vooruit. De bewezen
-              workflows en bedrijfslogica migreren direct naar een schaalbare
-              architectuur die de AI-functies, automatisering en native mobiele
-              ervaring uit dit voorstel kan ondersteunen.
+              Het Bubble-prototype was een belangrijke stap in het ontwikkelproces en het werk dat daarin is gedaan blijft waardevol. De bestaande workflows, automatiseringen en bedrijfslogica vormen de basis voor het productieplatform. Met een op maat gebouwde codebase kunnen deze worden vertaald naar een schaalbare en toekomstbestendige architectuur die verdere groei en nieuwe functionaliteiten mogelijk maakt.
             </p>
           </div>
           <div className={styles.benefits}>
@@ -81,7 +73,7 @@ export default function MigrationSection() {
         <div className={styles.note}>
           <span className={styles.noteLabel}>€0</span>
           <span className={styles.noteText}>
-            De migratie is inbegrepen als onderdeel van dit project — wij zien het als het leggen van het fundament voor alles hierboven. Geen extra kosten.
+            De migratie naar een codebase is inbegrepen als onderdeel van dit project. Wij rekenen hiervoor geen extra kosten wanneer de overige onderdelen uit dit voorstel worden gerealiseerd. De kosten voor ontwikkeling, infrastructuur en hosting blijven onderdeel van het projectbudget. Wanneer er alleen gekozen wordt voor het herbouwen van de huidige Bubble-applicatie naar een codebase, zonder de overige onderdelen, geldt het reguliere tarief. Voor deze applicatie zou een standalone rebuild ongeveer €12.500 kosten.
           </span>
         </div>
       </div>

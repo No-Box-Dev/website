@@ -1,0 +1,56 @@
+/* =========================================
+   112Schade Proposal V2 — Page Wrapper
+   ========================================= */
+
+/* 112Schade brand tokens (from styleguide) */
+:root {
+  --s-diep-blauw: #2A4391;
+  --s-turquoise: #1F9D9B;
+  --s-zilver: #DDE2E7;
+  --s-nachtblauw: #132444;
+  --s-white: #FFFFFF;
+  --s-snow: #F4F6F8;
+}
+
+.proposal {
+  overflow-x: hidden;
+}
+
+.featureIntro {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #FE795D 0%, #F06A4A 40%, #E5603F 100%);
+  text-align: center;
+}
+
+.featureIntroInner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 3vw, 3rem);
+}
+
+.featureIntroLabel {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.featureIntroTitle {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: white;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.featureIntroDesc {
+  font-family: 'Titillium Web', var(--font-body);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.8);
+}

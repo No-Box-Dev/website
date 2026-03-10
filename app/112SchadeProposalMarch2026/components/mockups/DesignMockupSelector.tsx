@@ -233,6 +233,10 @@ function ResponsiveMockup() {
               <div className={styles.respCardPlaceholder} style={{ height: 28 }} />
               <div className={styles.respCardPlaceholder} style={{ height: 28 }} />
             </div>
+            <div style={{ padding: "6px 6px 0" }}>
+              <div className={styles.respBlock} style={{ width: "90%", height: 4, margin: "4px auto" }} />
+              <div className={styles.respBlock} style={{ width: "70%", height: 4, margin: "4px auto" }} />
+            </div>
           </div>
         </div>
 
@@ -246,6 +250,10 @@ function ResponsiveMockup() {
             <div className={styles.respPhoneCards}>
               <div className={styles.respCardPlaceholder} />
               <div className={styles.respCardPlaceholder} />
+            </div>
+            <div style={{ padding: "4px 0" }}>
+              <div className={styles.respBlock} style={{ width: "85%", height: 4, margin: "3px auto" }} />
+              <div className={styles.respBlock} style={{ width: "60%", height: 4, margin: "3px auto" }} />
             </div>
           </div>
         </div>

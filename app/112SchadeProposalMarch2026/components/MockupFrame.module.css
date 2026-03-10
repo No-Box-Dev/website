@@ -78,7 +78,8 @@
 }
 
 .phoneContent {
-  min-height: 680px;
+  height: 620px;
+  overflow: hidden;
 }
 
 /* -- Web frame -- */
@@ -139,6 +140,6 @@
   }
 
   .phoneContent {
-    min-height: 580px;
+    height: 480px;
   }
 }

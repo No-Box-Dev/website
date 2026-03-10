@@ -36,37 +36,20 @@
   gap: 10px;
 }
 
-.logoMark {
-  width: 32px;
+.logoImg {
   height: 32px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #2A4391, #1F9D9B);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Titillium Web', var(--font-body);
-  font-size: 0.6rem;
-  font-weight: 700;
-  color: white;
+  width: auto;
+  transition: filter 0.3s ease;
 }
 
-.logoText {
-  font-family: 'Titillium Web', var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: #132444;
-  transition: color 0.3s ease;
-}
-
-.atTop .logoText {
-  color: white;
+.scrolled .logoImg {
+  filter: brightness(0) saturate(100%) invert(10%) sepia(30%) saturate(3000%) hue-rotate(200deg) brightness(40%);
 }
 
 .links {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 8px;
 }
 
 .link {
@@ -99,6 +82,21 @@
 }
 
 .atTop .link.active {
+  color: white;
+}
+
+.linkWrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.separator {
+  font-size: 0.85rem;
+  color: #6B7280;
+}
+
+.atTop .separator {
   color: white;
 }
 

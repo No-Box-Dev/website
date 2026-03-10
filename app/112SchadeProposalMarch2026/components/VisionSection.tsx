@@ -50,7 +50,7 @@ const pillars = [
 
 const v1Features = [
   "Schade-intake formulier",
-  "Operator dashboard",
+  "Admin dashboard",
   "Basis berichten",
   "Verzekeraar contactlog",
   "Statustracking",
@@ -67,7 +67,7 @@ const v2Features = [
   { name: "Native iOS App", isNew: true },
   { name: "Marketingpagina & SEO", isNew: true },
   { name: "Schade-intake (gemigreerd)", isNew: false },
-  { name: "Operator Dashboard (gemigreerd)", isNew: false },
+  { name: "Admin Dashboard (gemigreerd)", isNew: false },
   { name: "Berichten (verbeterd)", isNew: false },
   { name: "Verzekeraar Contact (verbeterd)", isNew: false },
   { name: "Statustracking (verbeterd)", isNew: false },
@@ -81,9 +81,7 @@ export default function VisionSection() {
           <span className={styles.label}>De Visie</span>
           <h2 className={styles.title}>Van MVP naar Productie</h2>
           <p className={styles.subtitle}>
-            V2 brengt 112Schade van MVP naar productie — een transformatie naar een
-            AI-gestuurd schadeplatform met intelligente analyse, geautomatiseerde
-            workflows, native mobiel en uitgebreide analytics.
+            Met V2 groeit 112Schade van een MVP naar een robuust productieplatform. Het systeem evolueert naar een AI-gestuurd schadeplatform waarin intelligente analyse, geautomatiseerde workflows, een native mobiele applicatie en uitgebreide analytics samenkomen om schadeprocessen efficiënter, inzichtelijker en schaalbaarder te maken.
           </p>
           <div className={styles.pillars}>
             {pillars.map((p) => (
@@ -131,7 +129,7 @@ export default function VisionSection() {
                   >
                     <span className={styles.screenNum}>{String(i + 1).padStart(2, "0")}</span>
                     {s.name}
-                    {s.isNew && " ✦"}
+                    {s.isNew && <span className={styles.newBadge}>NIEUW</span>}
                   </div>
                 ))}
               </div>

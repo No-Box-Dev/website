@@ -1,15 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import styles from "./ProposalNav.module.css";
 
 const sections = [
   { id: "about", label: "Over" },
   { id: "vision", label: "Visie" },
-  { id: "features", label: "Functies" },
-  { id: "timeline", label: "Planning" },
-  { id: "investment", label: "Investering" },
-  { id: "next-steps", label: "Vervolg" },
+  { id: "features", label: "Features" },
+  { id: "timeline", label: "Roadmap" },
+  { id: "next-steps", label: "Contact" },
 ];
 
 export default function ProposalNav() {
@@ -50,18 +50,25 @@ export default function ProposalNav() {
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : styles.atTop}`}>
       <div className={styles.inner}>
         <div className={styles.logo}>
-          <div className={styles.logoMark}>112</div>
-          <span className={styles.logoText}>112Schade</span>
+          <Image
+            src="/images/logo-white.svg"
+            alt="NoBoxDev logo"
+            width={120}
+            height={32}
+            className={styles.logoImg}
+          />
         </div>
         <div className={styles.links}>
-          {sections.map((s) => (
-            <button
-              key={s.id}
-              className={`${styles.link} ${active === s.id ? styles.active : ""}`}
-              onClick={() => scrollTo(s.id)}
-            >
-              {s.label}
-            </button>
+          {sections.map((s, i) => (
+            <span key={s.id} className={styles.linkWrap}>
+              {i > 0 && <span className={styles.separator}>›</span>}
+              <button
+                className={`${styles.link} ${active === s.id ? styles.active : ""}`}
+                onClick={() => scrollTo(s.id)}
+              >
+                {s.label}
+              </button>
+            </span>
           ))}
         </div>
       </div>

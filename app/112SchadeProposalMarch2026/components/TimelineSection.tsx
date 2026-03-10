@@ -3,27 +3,27 @@ import styles from "./TimelineSection.module.css";
 const phases = [
   {
     num: "01",
-    title: "Migratie & Fundament",
-    time: "Week 1–3",
-    desc: "Bubble-naar-code migratie, database-opzet, kerninfrastructuur, design systeem",
+    title: "Nader te bepalen",
+    time: "",
+    desc: "",
   },
   {
     num: "02",
-    title: "AI & Intelligentie",
-    time: "Week 3–5",
-    desc: "AI schadeanalyse, verzekeraar e-mailverwerking, automatiseringsregels",
+    title: "Nader te bepalen",
+    time: "",
+    desc: "",
   },
   {
     num: "03",
-    title: "Ervaring & Dashboard",
-    time: "Week 5–7",
-    desc: "Berichtensysteem, design-verbetering, statistiekendashboard",
+    title: "Nader te bepalen",
+    time: "",
+    desc: "",
   },
   {
     num: "04",
-    title: "Test & Lancering",
-    time: "Week 7–8",
-    desc: "Eindtest, optimalisatie, lanceringsvoorbereiding, go-live",
+    title: "Nader te bepalen",
+    time: "",
+    desc: "",
   },
 ];
 
@@ -45,6 +45,9 @@ export default function TimelineSection() {
             </div>
           ))}
         </div>
+        <p className={styles.note}>
+          In deze sectie kunnen jullie volgen waar we staan in de ontwikkeling, zodat er altijd duidelijk inzicht is in de voortgang en de status van de applicatie. Eventuele opmerkingen of updates zullen hier ook worden gedeeld.
+        </p>
       </div>
     </section>
   );

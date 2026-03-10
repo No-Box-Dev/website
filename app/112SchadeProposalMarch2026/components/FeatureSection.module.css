@@ -26,8 +26,8 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
+  gap: 80px;
+  align-items: start;
 }
 
 .gridReverse {

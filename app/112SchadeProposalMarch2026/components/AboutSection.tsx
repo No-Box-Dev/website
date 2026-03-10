@@ -4,21 +4,7 @@ export default function AboutSection() {
   return (
     <section id="about" className={styles.about}>
       <div className={styles.container}>
-        <span className={styles.label}>Over</span>
-        <h2 className={styles.title}>112Schade V1 — Waar We Staan</h2>
         <div className={styles.grid}>
-          <div className={styles.text}>
-            <p>
-              112Schade is een platform voor schadebeheer dat mensen helpt bij
-              het navigeren van verzekeringsschade. Momenteel gebouwd in Bubble,
-              verwerkt het schade-intake, operatorbeheer en communicatie met verzekeraars.
-            </p>
-            <p>
-              Het platform werkt — maar wordt beperkt door de limieten van Bubble.
-              V2 verhuist naar code, voegt AI-intelligentie toe, automatiseert
-              operatorworkflows en levert een native mobiele ervaring.
-            </p>
-          </div>
           <div>
             <div className={styles.platformPreview}>
               <div className={styles.previewHeader}>
@@ -66,6 +52,13 @@ export default function AboutSection() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className={styles.text}>
+            <span className={styles.label}>Over</span>
+            <h2 className={styles.title}>112Schade Applicatie MVP</h2>
+            <p>
+              De MVP van app.112schade is een no-code webapplicatie die is opgebouwd in Bubble en functioneert als een combinatie van front-end, back-endlogica en database in één omgeving. De applicatie bestaat uit verschillende gebruikersflows voor schade-intake, dossierbeheer en statusopvolging, waarbij gegevens via formulieren worden ingevoerd, opgeslagen in de Bubble-database en vervolgens via workflows verder worden verwerkt.
+            </p>
           </div>
         </div>
       </div>

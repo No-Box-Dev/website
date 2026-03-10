@@ -30,7 +30,9 @@ export default function Contact() {
           Let&apos;s <span className={styles.accent}>Talk</span>
         </h2>
         <p className={styles.subtitle}>
-          Working on something exciting and need support? We build human-centered digital products. Drop us a line.
+          Working on something exciting and need support?
+          <br />
+          We build people-centered digital products. Drop us a line.
         </p>
         <form
           className={styles.form}

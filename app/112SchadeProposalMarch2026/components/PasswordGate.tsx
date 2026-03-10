@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, FormEvent } from "react";
+import Image from "next/image";
 import styles from "./PasswordGate.module.css";
 
 const PASS = "klachtenafwikkeling";
@@ -38,8 +39,13 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
     <div className={styles.gate}>
       <div className={styles.glow} />
       <div className={`${styles.card} ${error ? styles.shake : ""}`}>
-        <div className={styles.logoMark}>112</div>
-        <h1 className={styles.title}>112Schade</h1>
+        <Image
+          src="/images/112schade-logo.png"
+          alt="112 Schade logo"
+          width={200}
+          height={80}
+          className={styles.logoMark}
+        />
         <p className={styles.sub}>Voer het wachtwoord in om dit voorstel te bekijken</p>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.inputWrap}>

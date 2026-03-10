@@ -16,6 +16,7 @@ import IOSAppMockup from "./components/mockups/IOSAppMockup";
 import InsurerEmailMockup from "./components/mockups/InsurerEmailMockup";
 import MarketingPageMockup from "./components/mockups/MarketingPageMockup";
 import DesignMockupSelector from "./components/mockups/DesignMockupSelector";
+import InboxMockup from "./components/mockups/InboxMockup";
 import MigrationSection from "./components/MigrationSection";
 import TimelineSection from "./components/TimelineSection";
 import PricingSection from "./components/PricingSection";
@@ -35,9 +36,22 @@ export default function ProposalPage() {
         <AboutSection />
         <VisionSection />
 
+        <section id="features" className={styles.featureIntro}>
+          <div className={styles.featureIntroInner}>
+            <span className={styles.featureIntroLabel}>Onze Suggesties</span>
+            <h2 className={styles.featureIntroTitle}>
+              Volgende Stappen voor de Applicatie
+            </h2>
+            <p className={styles.featureIntroDesc}>
+              Op basis van onze analyse van de huidige MVP en de gewenste groeirichting, presenteren wij hieronder onze aanbevolen functies voor de volgende fase van 112Schade. Elke functie is ontworpen om het platform slimmer, sneller en schaalbaarder te maken.
+            </p>
+          </div>
+        </section>
+
+        <MigrationSection />
+
         {/* Functie 01: AI Schadeanalyse */}
         <FeatureSection
-          id="features"
           num="01"
           title="AI-Gestuurde Schadeanalyse"
           price="€3.500"
@@ -57,23 +71,23 @@ export default function ProposalPage() {
           </MockupFrame>
         </FeatureSection>
 
-        {/* Functie 02: Geavanceerd Berichtensysteem */}
+        {/* Functie 02: Admin Automatisering */}
         <FeatureSection
           num="02"
-          title="Geavanceerd Berichtensysteem"
-          price="€2.500"
-          desc="Gespreksdraden per schademelding voor klanten, operators en verzekeraars. Realtime updates, bestandsbijlagen, berichtsjablonen en volledige gespreksgeschiedenis — alles gekoppeld aan de schademelding."
+          title="Admin Workflow Automatisering"
+          price="€2.000"
+          desc="Verminder de werkdruk van admins door intelligente automatisering. Automatische toewijzing op basis van type en expertise, opvolgingsherinneringen, statusmeldingen aan klanten en automatische escalatie van stilstaande dossiers."
           items={[
-            "Gespreksdraden per schademelding",
-            "Realtime berichtaflevering",
-            "Bestands- en fotobijlagen",
-            "Berichtsjablonen voor operators",
-            "Volledige audit trail & geschiedenis",
+            "Slimme automatische toewijzing",
+            "Geautomatiseerde opvolgingen",
+            "Statusupdate-meldingen",
+            "Escalatie van stilstaande dossiers",
+            "Aangepaste automatiseringsregels",
           ]}
           variant="light"
         >
-          <MockupFrame type="phone">
-            <MessagingMockup />
+          <MockupFrame type="web" url="112schade.nl/admin/automatisering">
+            <AutomationMockup />
           </MockupFrame>
         </FeatureSection>
 
@@ -118,32 +132,11 @@ export default function ProposalPage() {
           </MockupFrame>
         </FeatureSection>
 
-        {/* Functie 05: Operator Automatisering */}
+        {/* Functie 05: Design Verbeteringen */}
         <FeatureSection
           num="05"
-          title="Operator Workflow Automatisering"
-          price="€2.000"
-          desc="Verminder de werkdruk van operators door intelligente automatisering. Automatische toewijzing op basis van type en expertise, opvolgingsherinneringen, statusmeldingen aan klanten en automatische escalatie van stilstaande dossiers."
-          items={[
-            "Slimme automatische toewijzing",
-            "Geautomatiseerde opvolgingen",
-            "Statusupdate-meldingen",
-            "Escalatie van stilstaande dossiers",
-            "Aangepaste automatiseringsregels",
-          ]}
-          variant="navy"
-          reverse
-        >
-          <MockupFrame type="web" url="112schade.nl/admin/automatisering">
-            <AutomationMockup />
-          </MockupFrame>
-        </FeatureSection>
-
-        {/* Functie 06: Design Verbeteringen — Inbegrepen */}
-        <FeatureSection
-          num="06"
           title="Design & UX Verbetering"
-          price="€2.000"
+          price="€2.500"
           desc="Modern, professioneel herontwerp van de klantinterface en het operator-dashboard. Inclusief de overgang van de huidige goud/gele huisstijl naar de nieuwe blauwe merkidentiteit. Verbeterde informatiehiërarchie, responsive design en een verzorgde uitstraling die vertrouwen wekt bij klanten."
           items={[
             "Nieuwe merkidentiteit (blauw/turquoise)",
@@ -152,16 +145,37 @@ export default function ProposalPage() {
             "Verbeterde operator-dashboard UX",
             "Consistent designsysteem",
           ]}
-          variant="light"
+          variant="navy"
+          reverse
         >
           <DesignMockupSelector />
         </FeatureSection>
 
-        {/* Optioneel — Functie 07: Native iOS App */}
+        {/* Functie 06: AI Ondersteunde Berichteninbox */}
+        <FeatureSection
+          num="06"
+          title="AI Ondersteunde Berichteninbox"
+          price="€2.500"
+          desc="Gespreksdraden per schademelding voor klanten, operators en verzekeraars. Realtime updates, bestandsbijlagen, berichtsjablonen en volledige gespreksgeschiedenis — alles gekoppeld aan de schademelding."
+          items={[
+            "Gespreksdraden per schademelding",
+            "Realtime berichtaflevering",
+            "Bestands- en fotobijlagen",
+            "Berichtsjablonen voor operators",
+            "Volledige audit trail & geschiedenis",
+          ]}
+          variant="light"
+        >
+          <MockupFrame type="web" url="112schade.nl/admin/inbox">
+            <InboxMockup />
+          </MockupFrame>
+        </FeatureSection>
+
+        {/* Functie 07: Native iOS App */}
         <FeatureSection
           num="07"
           title="Native iOS App"
-          price="Optioneel · €2.000"
+          price="€2.500"
           desc="Een native iOS-app waarmee klanten schade kunnen melden, foto's direct kunnen uploaden, de status in realtime kunnen volgen en via pushmeldingen kunnen communiceren met operators."
           items={[
             "Schademelding met foto-upload",
@@ -178,18 +192,20 @@ export default function ProposalPage() {
           </MockupFrame>
         </FeatureSection>
 
-        {/* Optioneel — Functie 08: Marketingpagina & SEO */}
+        {/* Functie 08: Marketingpagina & SEO */}
         <FeatureSection
           num="08"
           title="Marketingpagina & SEO"
-          price="Optioneel · €3.000"
-          desc="Volledige migratie van de huidige 112schade.nl website-content naar een nieuw, professioneel platform. Alle bestaande pagina's, teksten en afbeeldingen worden overgezet met behoud van SEO-posities, URL-structuur en zoekmachinevindbaar­heid. Aangevuld met conversie-optimalisatie en een modern, vertrouwenwekkend design."
+          price="€6.500"
+          desc="Nieuwbouw van een professionele marketingwebsite voor 112Schade, inclusief volledige migratie van alle bestaande content van 112schade.nl. Alle pagina's, teksten en afbeeldingen worden overgezet met behoud van SEO-posities, URL-structuur en zoekmachinevindbaar­heid. Aangevuld met conversie-optimalisatie en een modern, vertrouwenwekkend design."
           items={[
+            "Nieuwbouw professionele marketingwebsite",
             "Volledige contentmigratie huidige website",
             "Behoud van SEO-posities & URL-structuur",
             "301-redirects & technische SEO-migratie",
             "Conversie-geoptimaliseerd nieuw design",
             "Analytics & conversietracking",
+            "Google Analytics integratie",
           ]}
           variant="light"
         >
@@ -198,9 +214,8 @@ export default function ProposalPage() {
           </MockupFrame>
         </FeatureSection>
 
-        <MigrationSection />
         <TimelineSection />
-        <PricingSection />
+        {/* <PricingSection /> */}
         <NextStepsSection />
       </div>
     </PasswordGate>

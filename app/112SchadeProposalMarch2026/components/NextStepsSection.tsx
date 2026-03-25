@@ -23,7 +23,7 @@ export default function NextStepsSection() {
         <h2 className={styles.title}>Contact</h2>
         <div className={styles.appointmentCard}>
           <span className={styles.appointmentLabel}>Volgende afspraak op:</span>
-          <span className={styles.appointmentDate}>Dinsdag 31 maart om 15:15 of woensdag 1 april vóór 14:00</span>
+          <span className={styles.appointmentDate}>Dinsdag 31 maart om 15:15 of woensdag 1 april om 14:00</span>
         </div>
 
         <div className={styles.contact}>

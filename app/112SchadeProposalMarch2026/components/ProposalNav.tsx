@@ -56,8 +56,8 @@ export default function ProposalNav() {
       <div className={styles.inner}>
         <div className={styles.logo}>
           <Image
-            src="/images/logo-white.svg"
-            alt="NoBoxDev logo"
+            src="/images/112schade-logo-white.svg"
+            alt="112Schade logo"
             width={120}
             height={32}
             className={styles.logoImg}

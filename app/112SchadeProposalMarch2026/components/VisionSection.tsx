@@ -34,12 +34,12 @@ const pillars = [
   {
     icon: <IconAI />,
     title: "AI-Gestuurd",
-    desc: "Intelligente schadeanalyse, e-mailverwerking van verzekeraars, fraudedetectie en voorgestelde oplossingen. AI doet het zware werk zodat operators zich kunnen richten op wat ertoe doet.",
+    desc: "Intelligente schadeanalyse, e-mailverwerking van verzekeraars, fraudedetectie en voorgestelde oplossingen. AI doet het zware werk zodat admins zich kunnen richten op wat ertoe doet.",
   },
   {
     icon: <IconAutomation />,
     title: "Geautomatiseerd",
-    desc: "Slimme schadetoewijzing, automatische opvolgingen, statusmeldingen en escalatieregels. Drastische vermindering van handmatig operatorwerk.",
+    desc: "Slimme schadetoewijzing, automatische opvolgingen, statusmeldingen en escalatieregels. Drastische vermindering van handmatig adminwerk.",
   },
   {
     icon: <IconScale />,
@@ -61,9 +61,9 @@ const v2Features = [
   { name: "AI Verzekeraar E-mail Intelligentie", isNew: true },
   { name: "Geavanceerd Berichtensysteem", isNew: true },
   { name: "Statistieken & Engagement Dashboard", isNew: true },
-  { name: "Operator Workflow Automatisering", isNew: true },
+  { name: "Admin Workflow Automatisering", isNew: true },
   { name: "Herontworpen Klantenportaal", isNew: true },
-  { name: "Herontworpen Operator Dashboard", isNew: true },
+  { name: "Herontworpen Admin Dashboard", isNew: true },
   { name: "Native iOS App", isNew: true },
   { name: "Marketingpagina & SEO", isNew: true },
   { name: "Schade-intake (gemigreerd)", isNew: false },

@@ -61,7 +61,7 @@ export default function ProposalPage() {
             "Inschatting van schade-ernst",
             "Voorgestelde oplossingsroutes",
             "Fraudedetectie signalering",
-            "Lerend van operatorfeedback",
+            "Lerend van adminfeedback",
           ]}
           variant="navy"
           reverse
@@ -96,13 +96,13 @@ export default function ProposalPage() {
           num="03"
           title="AI Verzekeraar E-mail Intelligentie"
           price="€2.500"
-          desc="AI-gestuurde analyse van binnenkomende e-mails van verzekeraars. Haalt automatisch belangrijke beslissingen, deadlines en vereiste acties eruit en koppelt ze aan de betreffende schademelding. Operators krijgen een heldere samenvatting in plaats van dichte e-mails."
+          desc="AI-gestuurde analyse van binnenkomende e-mails van verzekeraars. Haalt automatisch belangrijke beslissingen, deadlines en vereiste acties eruit en koppelt ze aan de betreffende schademelding. Admins krijgen een heldere samenvatting in plaats van dichte e-mails."
           items={[
             "Automatische e-mailinname",
             "Extractie van beslissingen",
             "Deadline- & actiedetectie",
             "Auto-koppeling aan schadedossiers",
-            "Operator samenvattingsdashboard",
+            "Admin samenvattingsdashboard",
           ]}
           variant="teal"
           reverse
@@ -117,10 +117,10 @@ export default function ProposalPage() {
           num="04"
           title="Statistieken & Engagement Dashboard"
           price="€2.500"
-          desc="Uitgebreid analytisch dashboard met schade-engagement, oplostijden, operatorprestaties en klanttevredenheid. Visuele inzichten om de bedrijfsvoering te optimaliseren en waarde aan te tonen."
+          desc="Uitgebreid analytisch dashboard met schade-engagement, oplostijden, adminprestaties en klanttevredenheid. Visuele inzichten om de bedrijfsvoering te optimaliseren en waarde aan te tonen."
           items={[
             "Bijhouden van oplostijden",
-            "Operatorprestatie-metrics",
+            "Adminprestatie-metrics",
             "Klantengagement-analyse",
             "Trendanalyse & prognoses",
             "Exporteerbare rapporten & grafieken",
@@ -137,12 +137,12 @@ export default function ProposalPage() {
           num="05"
           title="Design & UX Verbetering"
           price="€2.500"
-          desc="Modern, professioneel herontwerp van de klantinterface en het operator-dashboard. Inclusief de overgang van de huidige goud/gele huisstijl naar de nieuwe blauwe merkidentiteit. Verbeterde informatiehiërarchie, responsive design en een verzorgde uitstraling die vertrouwen wekt bij klanten."
+          desc="Modern, professioneel herontwerp van de klantinterface en het admin-dashboard. Inclusief de overgang van de huidige goud/gele huisstijl naar de nieuwe blauwe merkidentiteit. Verbeterde informatiehiërarchie, responsive design en een verzorgde uitstraling die vertrouwen wekt bij klanten."
           items={[
             "Nieuwe merkidentiteit (blauw/turquoise)",
             "Moderne klantgerichte UI",
             "Responsive mobile-first design",
-            "Verbeterde operator-dashboard UX",
+            "Verbeterde admin-dashboard UX",
             "Consistent designsysteem",
           ]}
           variant="navy"
@@ -156,12 +156,12 @@ export default function ProposalPage() {
           num="06"
           title="AI Ondersteunde Berichteninbox"
           price="€2.500"
-          desc="Gespreksdraden per schademelding voor klanten, operators en verzekeraars. Realtime updates, bestandsbijlagen, berichtsjablonen en volledige gespreksgeschiedenis — alles gekoppeld aan de schademelding."
+          desc="Gespreksdraden per schademelding voor klanten, admins en verzekeraars. Realtime updates, bestandsbijlagen, berichtsjablonen en volledige gespreksgeschiedenis — alles gekoppeld aan de schademelding."
           items={[
             "Gespreksdraden per schademelding",
             "Realtime berichtaflevering",
             "Bestands- en fotobijlagen",
-            "Berichtsjablonen voor operators",
+            "Berichtsjablonen voor admins",
             "Volledige audit trail & geschiedenis",
           ]}
           variant="light"
@@ -176,7 +176,7 @@ export default function ProposalPage() {
           num="07"
           title="Native iOS App"
           price="€2.500"
-          desc="Een native iOS-app waarmee klanten schade kunnen melden, foto's direct kunnen uploaden, de status in realtime kunnen volgen en via pushmeldingen kunnen communiceren met operators."
+          desc="Een native iOS-app waarmee klanten schade kunnen melden, foto's direct kunnen uploaden, de status in realtime kunnen volgen en via pushmeldingen kunnen communiceren met admins."
           items={[
             "Schademelding met foto-upload",
             "Realtime statustracking",

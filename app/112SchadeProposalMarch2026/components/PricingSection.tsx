@@ -6,7 +6,7 @@ const core: { num: string; name: string; scope: string; cost: string }[] = [
   { num: "03", name: "AI Verzekeraar E-mail Intelligentie", scope: "E-mailinname, extractie, auto-koppeling, samenvattingen", cost: "€2.500" },
   { num: "04", name: "Statistieken & Engagement Dashboard", scope: "Oplostijden, prestaties, engagement, rapporten", cost: "€2.500" },
   { num: "05", name: "Admin Workflow Automatisering", scope: "Auto-toewijzing, opvolgingen, meldingen, escalatie", cost: "€2.000" },
-  { num: "06", name: "Design & UX Verbetering", scope: "Nieuwe merkidentiteit, klant-UI, operator-dashboard, designsysteem", cost: "€2.500" },
+  { num: "06", name: "Design & UX Verbetering", scope: "Nieuwe merkidentiteit, klant-UI, admin-dashboard, designsysteem", cost: "€2.500" },
   { num: "07", name: "Native iOS App", scope: "Schademelding, tracking, pushmeldingen, berichten", cost: "€2.500" },
   { num: "08", name: "Marketingpagina & SEO", scope: "Nieuwbouw website, volledige contentmigratie, behoud SEO-posities, nieuw design", cost: "€6.500" },
 ];
